@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="mr">
 <head>
     <meta charset="UTF-8">
@@ -676,14 +676,19 @@
         <div class="popup-content">
             <span class="close-popup" onclick="closePopup()">&times;</span>
             <h3 style="color: #d32f2f; margin-bottom: 15px; border-bottom: 2px solid #ffcdd2; padding-bottom: 10px;">महत्त्वाची सूचना / Important Notice</h3>
-            <p style="color: #d32f2f; font-weight: 600; margin-bottom: 10px; font-size: 1.1rem;">
+            <p style="color: #d32f2f; font-weight: 600; font-size: 1rem; margin-bottom: 10px;">
                 कृषी मित्र नोंदणीसाठी अंतिम तारीख 15 एप्रिल 2026 होती तरी तांत्रिक अडचणीमुळे मुदत 22/04/2026 ते 30/04/2026 करण्यात येत आहे.
             </p>
-            <p style="color: #d32f2f; font-weight: 600; font-size: 1rem;">
+            <p style="color: #d32f2f; font-weight: 600; font-size: 1rem; margin-bottom: 10px;">
                 The last date for Krushi Mitra registration was April 15, 2026, but due to technical difficulties, the deadline has been extended from 22/04/2026 to 30/04/2026.
             </p>
+            <div style="background-color: #fdedec; border-left: 4px solid #e74c3c; padding: 15px; margin-top: 15px; text-align: left;">
+                <strong style="color: #c0392b;">तांत्रिक अडचण / Technical Issue:</strong><br>
+                <span style="color: #c0392b; font-size: 0.95rem;">तांत्रिक अडचणीमुळे, फॉर्मची लिंक उद्या, <strong>२३ एप्रिल २०२६ रोजी सकाळी ११:०० वाजता</strong> उपलब्ध होईल.</span><br>
+                <span style="color: #c0392b; font-size: 0.9rem;">Due to a technical issue, the form link will be available tomorrow, <strong>April 23, 2026, at 11:00 AM</strong>.</span>
+            </div>
             <div style="margin-top: 25px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://forms.gle/ATMmN5UwXt5d1zd99" target="_blank" class="btn" style="padding: 10px 25px; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">आताच अर्ज करा</a>
+                <button class="btn" disabled style="background-color: #bdc3c7; color: #ffffff; cursor: not-allowed; box-shadow: none; padding: 10px 25px; font-size: 1.1rem; border: none;">Apply Now (Link active tomorrow at 11 AM)</button>
                 <button class="btn" onclick="closePopup()" style="background-color: transparent; border: 2px solid #f44336; color: #f44336; box-shadow: none; padding: 10px 25px; font-size: 1.1rem;">बंद करा</button>
             </div>
         </div>
@@ -877,7 +882,7 @@
             </div>
             
             <div style="text-align: left;">
-                <button class="btn" disabled style="background-color: #bdc3c7; color: #ffffff; cursor: not-allowed; box-shadow: none; padding: 12px 30px; font-size: 1.1rem;">Apply Now (Link active from 22/04 4:00 PM)</button>
+                <button class="btn" disabled style="background-color: #bdc3c7; color: #ffffff; cursor: not-allowed; box-shadow: none; padding: 12px 30px; font-size: 1.1rem; border: none;">Apply Now (Link active from 22/04 4:00 PM)</button>
             </div>
         </div>
     </section>
@@ -895,9 +900,16 @@
                 <p style="font-size: 0.95rem; margin-top: 10px; color: #d32f2f; margin-left: 0; max-width: 100%;">
                     The last date for Krushi Mitra registration was April 15, 2026, but due to technical difficulties, the deadline has been extended from 22/04/2026 to 30/04/2026.
                 </p>
+                <hr style="border: 0; height: 1px; background-color: #ffcdd2; margin: 15px 0;">
+                <p style="font-size: 1.05rem; font-weight: 600; margin-bottom: 5px; color: #c0392b; margin-left: 0; max-width: 100%;">
+                    तांत्रिक अडचणीमुळे, फॉर्मची लिंक उद्या, <strong>२३ एप्रिल २०२६ रोजी सकाळी ११:०० वाजता</strong> उपलब्ध होईल.
+                </p>
+                <p style="font-size: 0.95rem; margin-top: 5px; color: #c0392b; margin-left: 0; max-width: 100%;">
+                    Due to a technical issue, the form link will be available tomorrow, <strong>April 23, 2026, at 11:00 AM</strong>.
+                </p>
             </div>
 
-            <a href="https://forms.gle/ATMmN5UwXt5d1zd99" class="btn btn-wave" target="_blank">आताच अर्ज करा (Apply Now)</a>
+            <button class="btn btn-wave" disabled style="background-color: #bdc3c7; color: #ffffff; cursor: not-allowed; box-shadow: none; border: none;">Apply Now (Link active tomorrow at 11 AM)</button>
         </div>
     </section>
 
