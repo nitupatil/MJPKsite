@@ -253,6 +253,7 @@
         .feature-section {
             background-color: #fdfdfd;
             overflow: hidden;
+            padding-bottom: 50px;
         }
 
         .feature-grid {
@@ -354,6 +355,25 @@
         .info-banner p {
             font-size: 1.2rem;
             color: var(--text-dark);
+        }
+
+        /* --- District Coordinator Section --- */
+        .district-coordinator-banner {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
+            border-left: 5px solid var(--primary-green);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 5;
+        }
+        
+        .district-coordinator-banner ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
         }
 
         /* --- Creative Call to Action Banner --- */
@@ -639,7 +659,12 @@
             .page-header h1 { font-size: 2.2rem; }
             .section-title { font-size: 2.2rem; }
             .cta-banner h2 { font-size: 2rem; }
-            .info-banner { padding: 25px; margin-bottom: 50px; }
+            
+            .info-banner, .district-coordinator-banner { 
+                padding: 25px; 
+                margin-bottom: 50px; 
+                border-radius: 15px;
+            }
             
             .feature-grid .feature-card { transition-delay: 0s !important; }
         }
@@ -652,13 +677,15 @@
             <span class="close-popup" onclick="closePopup()">&times;</span>
             <h3 style="color: #d32f2f; margin-bottom: 15px; border-bottom: 2px solid #ffcdd2; padding-bottom: 10px;">महत्त्वाची सूचना / Important Notice</h3>
             <p style="color: #d32f2f; font-weight: 600; margin-bottom: 10px; font-size: 1.1rem;">
-                अर्ज करण्यासाठी तांत्रिक अडचणीमुळे असुविधा झालेल्या सर्व अर्जदारांसाठी अर्ज भरण्याची मुदत वाढविण्यात येत आहे.
-सदर असुविधेचा विचार करून अर्ज भरण्याची शेवटची तारीख 20 एप्रिल 2026 पर्यंत वाढविण्यात आली आहे. तसेच, फॉर्म व वेबसाइट दिनांक २० .04.2026 रोजी दुपारी ४:०० पासून सुरळीतपणे सुरू होतील.<br><br>गैरसोयीबद्दल क्षमस्व.
+                कृषी मित्र नोंदणीसाठी अंतिम तारीख 15 एप्रिल 2026 होती तरी तांत्रिक अडचणीमुळे मुदत 22/04/2026 ते 30/04/2026 करण्यात येत आहे.
             </p>
             <p style="color: #d32f2f; font-weight: 600; font-size: 1rem;">
-                The application deadline is being extended for all applicants who experienced inconvenience due to technical difficulties. Considering this issue, the last date for submitting applications has been extended to April 20, 2026. Additionally, the application forms and the website will resume functioning smoothly from  April 20, 2026. 4:00 PM
+                The last date for Krushi Mitra registration was April 15, 2026, but due to technical difficulties, the deadline has been extended from 22/04/2026 to 30/04/2026.
             </p>
-            <button class="btn" onclick="closePopup()" style="margin-top: 20px; background-color: #f44336; color: white; border-radius: 30px; box-shadow: none;">Close / बंद करा</button>
+            <div style="margin-top: 25px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://forms.gle/ATMmN5UwXt5d1zd99" target="_blank" class="btn" style="padding: 10px 25px; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">आताच अर्ज करा</a>
+                <button class="btn" onclick="closePopup()" style="background-color: transparent; border: 2px solid #f44336; color: #f44336; box-shadow: none; padding: 10px 25px; font-size: 1.1rem;">बंद करा</button>
+            </div>
         </div>
     </div>
 
@@ -725,7 +752,7 @@
                     <li><strong style="color: var(--dark-green);">निवड:</strong> अर्जदारांची निवड लेखी परीक्षेतील गुण तसेच शालेय गुणवत्ता यादीच्या आधारे करण्यात येईल.</li>
                 </ul>
                 <div style="margin-top: 15px; padding: 10px; background-color: rgba(231, 76, 60, 0.1); border-left: 4px solid #e74c3c; border-radius: 4px;">
-                    <p style="color: #c0392b; font-weight: 600; font-size: 1rem; margin: 0;">नोंद: परीक्षेकचेचे वेळ आणि दिनाक ठिकाण संकेत स्थळावर देण्यात येईल याची नोंद घ्यावी.</p>
+                    <p style="color: #c0392b; font-weight: 600; font-size: 1rem; margin: 0;">नोंद: परीक्षेची वेळ आणि ठिकाण संकेत स्थळावर देण्यात येईल याची नोंद घ्यावी.</p>
                 </div>
             </div>
 
@@ -825,6 +852,36 @@
         </div>
     </section>
 
+    <section class="reveal" style="padding-top: 0; padding-bottom: 50px;">
+        <div class="district-coordinator-banner">
+            <h2 style="color: var(--dark-green); font-size: 2.2rem; font-weight: 700; margin-bottom: 10px;">जिल्हा समन्वयक नेमणे आहे</h2>
+            <p style="color: var(--dark-green); font-weight: bold; font-size: 1.3rem; margin-bottom: 20px;">महात्मा फुले कृषी विकास केंद्र, छत्रपती संभाजीनगर (खाजगी)</p>
+
+            <div style="background-color: var(--white); padding: 25px; border-radius: 10px; border-left: 5px solid var(--primary-green); margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <p style="font-size: 1.15rem; margin-bottom: 15px; line-height: 1.6; color: var(--text-dark);">
+                    <strong>खालील जिल्हे:</strong> छत्रपती संभाजीनगर, जालना, बीड, नांदेड, परभणी, हिंगोली, धाराशिव, लातूर, जळगाव, धुळे, नंदुरबार, नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली, अकोला, अमरावती, यवतमाळ, बुलडाणा, वाशीम
+                </p>
+                <ul style="list-style-type: none; margin-top: 15px; font-size: 1.15rem; color: var(--text-dark); line-height: 1.8;">
+                    <li><span>🎓</span> <span><strong>शिक्षण:</strong> Bsc Agri (अनिवार्य), MBA (अनिवार्य)</span></li>
+                    <li><span>💼</span> <span><strong>कामाचे स्वरूप:</strong> जिल्हा स्तरावर प्रकल्पाचे नियोजन करणे तालुका समन्वयक प्रशिक्षण, कृषी मित्र प्रशिक्षण, कृषी मित्र परीक्षा निवडीमध्ये सहकार्य करणे.</span></li>
+                    <li><span>💰</span> <span><strong>वेतन:</strong> ४५,०००/- प्रति महिना (निश्चित)</span></li>
+                    <li><span>📅</span> <span><strong>मुलाखत दिनांक:</strong> ३/५/२०२६</span></li>
+                    <li><span>📍</span> <span><strong>स्थळ:</strong> लेमन ट्री हॉटेल छत्रपती संभाजीनगर, सिडको</span></li>
+                    <li><span>⏰</span> <span><strong>वेळ:</strong> सकाळी १०:०० ते सायंकाळी ५:०० वाजेपर्यंत</span></li>
+                </ul>
+            </div>
+
+            <div style="background-color: #eafaf1; border-left: 4px solid var(--primary-green); padding: 15px; margin-bottom: 25px; border-radius: 5px; font-size: 1.1rem; color: var(--text-dark);">
+                <strong>महत्त्वाची सूचना:</strong> या पदासाठीचा अर्ज दिनांक <strong>२२-०४-२०२६ रोजी दुपारी ४:०० वाजल्यापासून</strong> उपलब्ध होईल. <br>
+                <span style="font-size: 0.95rem;">(Form will be available from 22-04-2026 at 4:00 PM)</span>
+            </div>
+            
+            <div style="text-align: left;">
+                <button class="btn" disabled style="background-color: #bdc3c7; color: #ffffff; cursor: not-allowed; box-shadow: none; padding: 12px 30px; font-size: 1.1rem;">Apply Now (Link active from 22/04 4:00 PM)</button>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-banner reveal">
         <div class="cta-content">
             <h2>तुमचे भविष्य घडवा, ग्रामीण विकास साधा!</h2>
@@ -832,12 +889,15 @@
             
             <div style="background-color: rgba(255, 235, 238, 0.9); border-left: 5px solid #f44336; padding: 15px; margin: 0 auto 25px auto; border-radius: 5px; color: #d32f2f; text-align: left; max-width: 600px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 <h4 style="margin-bottom: 8px; font-size: 1.1rem; font-weight: 700;">⚠️ महत्त्वाची सूचना / Important Notice</h4>
-                <p style="font-size: 1.05rem; font-weight: 600; margin-bottom: 5px; color: #d32f2f; margin-left: 0; max-width: 100%;">अर्ज करण्यासाठी तांत्रिक अडचणीमुळे असुविधा झालेल्या सर्व अर्जदारांसाठी अर्ज भरण्याची मुदत वाढविण्यात येत आहे.
-सदर असुविधेचा विचार करून अर्ज भरण्याची शेवटची तारीख 20 एप्रिल 2026 पर्यंत वाढविण्यात आली आहे. तसेच, फॉर्म व वेबसाइट दिनांक २० .04.2026 रोजी दुपारी ४:०० पासून सुरळीतपणे सुरू होतील.<br>गैरसोयीबद्दल क्षमस्व.</p>
-                <p style="font-size: 0.95rem; margin-top: 10px; color: #d32f2f; margin-left: 0; max-width: 100%;">The application deadline is being extended for all applicants who experienced inconvenience due to technical difficulties. Considering this issue, the last date for submitting applications has been extended to April 20, 2026. Additionally, the application forms and the website will resume functioning smoothly from  April 20, 2026. 4:00 PM</p>
+                <p style="font-size: 1.05rem; font-weight: 600; margin-bottom: 5px; color: #d32f2f; margin-left: 0; max-width: 100%;">
+                    कृषी मित्र नोंदणीसाठी अंतिम तारीख 15 एप्रिल 2026 होती तरी तांत्रिक अडचणीमुळे मुदत 22/04/2026 ते 30/04/2026 करण्यात येत आहे.
+                </p>
+                <p style="font-size: 0.95rem; margin-top: 10px; color: #d32f2f; margin-left: 0; max-width: 100%;">
+                    The last date for Krushi Mitra registration was April 15, 2026, but due to technical difficulties, the deadline has been extended from 22/04/2026 to 30/04/2026.
+                </p>
             </div>
 
-            <button class="btn" disabled style="background-color: #bdc3c7; color: #ffffff; cursor: not-allowed; box-shadow: none;">आताच अर्ज करा (Link Updating...)</button>
+            <a href="https://forms.gle/ATMmN5UwXt5d1zd99" class="btn btn-wave" target="_blank">आताच अर्ज करा (Apply Now)</a>
         </div>
     </section>
 
