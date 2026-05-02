@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="mr">
 <head>
     <meta charset="UTF-8">
@@ -262,7 +262,7 @@
             flex-wrap: wrap;
         }
 
-        /* --- Krushi Mitra Section with Advanced Animation --- */
+        /* --- Krushi Mitra Section --- */
         .krushi-mitra {
             padding: 80px 5%;
             background: linear-gradient(135deg, var(--light-yellow) 0%, #fdf6e3 100%);
@@ -306,102 +306,8 @@
         .km-text h2 {
             font-size: 2.5rem;
             color: var(--dark-green);
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             line-height: 1.2;
-        }
-
-        .km-text .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 25px;
-        }
-
-        /* The 4-second Text Slider Area */
-        .animated-text-container {
-            position: relative;
-            height: 100px;
-            margin-bottom: 25px;
-            background: rgba(39, 174, 96, 0.05);
-            border-radius: 10px;
-            padding: 15px;
-            border-left: 4px solid var(--primary-green);
-            overflow: hidden;
-        }
-
-        .sliding-text {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            pointer-events: none;
-        }
-
-        .sliding-text.active {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-        
-        .sliding-text.exit {
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-
-        .highlight-text {
-            color: #d35400;
-            font-weight: 700;
-        }
-
-        /* Important Notice Styling */
-        .important-notice {
-            background-color: #fff3cd;
-            border-left: 4px solid var(--highlight-gold);
-            padding: 15px;
-            margin-bottom: 25px;
-            border-radius: 5px;
-            font-size: 1.05rem;
-            color: var(--text-dark);
-        }
-
-        .important-notice strong {
-            color: #d35400;
-            display: block;
-            margin-bottom: 5px;
-            font-size: 1.15rem;
-        }
-
-        /* New Red Notice Styling */
-        .red-notice-box {
-            background-color: #ffebee;
-            border-left: 5px solid #f44336;
-            padding: 15px;
-            margin-bottom: 25px;
-            border-radius: 5px;
-            color: #d32f2f;
-            animation: pulse-red 2s infinite alternate;
-        }
-
-        @keyframes pulse-red {
-            0% { box-shadow: 0 2px 10px rgba(244, 67, 54, 0.1); }
-            100% { box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3); }
-        }
-
-        .red-notice-box h4 {
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .red-notice-box p {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 5px;
         }
 
         .km-buttons {
@@ -461,11 +367,51 @@
         }
 
         .about p {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
             font-size: 1.25rem;
             color: var(--text-light);
             line-height: 1.8;
+        }
+
+        /* --- Impact Statistics Section --- */
+        .impact-section {
+            background: linear-gradient(rgba(30, 132, 73, 0.9), rgba(39, 174, 96, 0.9)), url('https://i.ibb.co/LD2GHHsv/image001.jpg') center/cover fixed;
+            color: var(--white);
+            padding: 70px 5%;
+            text-align: center;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-box {
+            padding: 20px;
+        }
+
+        .stat-box .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .stat-box h3 {
+            font-size: 3.5rem;
+            color: var(--light-yellow);
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-box p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         /* --- Services Section --- */
@@ -491,6 +437,7 @@
             overflow: hidden;
             z-index: 1;
             box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .service-card::before {
@@ -527,7 +474,7 @@
         }
 
         .service-card h3 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--dark-green);
             margin-bottom: 15px;
             font-weight: 700;
@@ -536,6 +483,73 @@
         .service-card p {
             font-size: 1.1rem;
             color: var(--text-light);
+        }
+
+        /* --- Testimonials Section --- */
+        .testimonials {
+            background-color: var(--white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #fdfaf3;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            border-top: 5px solid var(--highlight-gold);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-card::before {
+            content: '”';
+            font-size: 6rem;
+            color: rgba(241, 196, 15, 0.2);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .author-info h4 {
+            color: var(--dark-green);
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.95rem;
         }
 
         /* --- Footer --- */
@@ -648,68 +662,12 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
-        /* --- Popup Modal Styling --- */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 2000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .popup-overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .popup-content {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transform: translateY(-20px);
-            transition: transform 0.3s ease;
-            border-top: 6px solid #f44336;
-        }
-
-        .popup-overlay.show .popup-content {
-            transform: translateY(0);
-        }
-
-        .close-popup {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #aaa;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .close-popup:hover {
-            color: #f44336;
-        }
-
-        /* --- Responsive Design (Tablet Adjustments) --- */
+        /* --- Responsive Design --- */
         @media (max-width: 1024px) {
             .hero-content h1 { font-size: 3rem; }
             .krushi-mitra { flex-direction: column-reverse; text-align: center; padding: 60px 5%; } 
             .km-text { max-width: 100%; border-top: none; border-left: 5px solid var(--highlight-gold); }
             .km-image { text-align: center; margin-bottom: 20px; }
-            .animated-text-container { height: 120px; text-align: left; }
             .km-buttons { justify-content: center; }
             .hero-content { align-items: center; text-align: center; margin: 0 auto; }
             .hero-overlay { justify-content: center; background: rgba(10, 40, 20, 0.7); }
@@ -717,7 +675,6 @@
             .hero-content .eng-text { border-left: none; padding-left: 0; }
         }
 
-        /* --- Responsive Design (Mobile Extact Match) --- */
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
@@ -772,26 +729,12 @@
             .km-text h2 { font-size: 2rem; }
             .section-title { font-size: 2rem; }
             
-            .animated-text-container { height: 140px; }
+            .impact-grid { grid-template-columns: 1fr; gap: 20px; }
+            .stat-box h3 { font-size: 2.8rem; }
         }
     </style>
 </head>
 <body>
-
-    <div id="notificationPopup" class="popup-overlay">
-        <div class="popup-content">
-            <span class="close-popup" onclick="closePopup()">&times;</span>
-            <h3 style="color: #d32f2f; margin-bottom: 15px; border-bottom: 2px solid #ffcdd2; padding-bottom: 10px;">📢 जाहीर निवेदन</h3>
-            <p style="color: #2c3e50; font-weight: 600; margin-bottom: 10px; font-size: 1.05rem; line-height: 1.6; text-align: left;">
-                दिनांक 1 एप्रिल 2026 रोजी प्रसिद्ध झालेल्या जाहिरातीसंदर्भात सर्वांना कळविण्यात येते की,<br><br>
-                महात्मा फुले कृषी विकास केंद्र ही एक खासगी व स्वतंत्र आस्थापना आहे.<br><br>
-                या आस्थापनेचा कोणत्याही सरकारी विभाग, योजना किंवा कार्यालयाशी कोणताही संबंध नाही.<br>
-                सदर जाहिरात व त्यातील सर्व उपक्रम, सेवा व भरती प्रक्रिया या पूर्णपणे खाजगी स्वरूपाच्या आहेत.<br><br>
-                नावामुळे कोणताही शासकीय संबंध असल्याचा गैरसमज करू नये.
-            </p>
-            <button class="btn" onclick="closePopup()" style="margin-top: 20px; background-color: #f44336; border-color: #f44336; border-radius: 30px;">बंद करा</button>
-        </div>
-    </div>
 
     <header id="header">
         <a href="index.html" class="logo-container">
@@ -822,9 +765,9 @@
                 <h2>आधुनिक तंत्रज्ञान आणि वैज्ञानिक दृष्टीकोन</h2>
                 <p class="eng-text">Helps Farmers Prosper<br>Modern Technology and Technical Works</p>
                 <div class="hero-buttons">
-                    <a href="index.html" class="btn">About Us</a>
+                    <a href="#about" class="btn">About Us</a>
                     <a href="krushi_mitra_bharati.html" class="btn btn-outline">News and Update</a>
-                    <a href="technicalsupport.html" class="btn btn-outline">Our Service</a>
+                    <a href="#services" class="btn btn-outline">Our Service</a>
                     <a href="contacts.html" class="btn">Contact</a>
                 </div>
             </div>
@@ -834,29 +777,9 @@
     <section class="krushi-mitra reveal" id="krushi-mitra">
         <div class="km-text">
             <h2>कृषी मित्र बना - आमच्या ज्ञानमोहीमेत सहभागी व्हा</h2>
-            <p class="subtitle">Farm Mitra initiative encourages actionable knowledge sharing to improve agricultural practices.</p>
-            
-            <div class="animated-text-container">
-                <div class="sliding-text active"><span class="highlight-text">एकूण जागा:</span> ३०,५००</div>
-                <div class="sliding-text"><span class="highlight-text">मेघा भरती:</span> प्रत्येक गावात एक 'कृषी मित्र' नेमणे आहे!</div>
-                <div class="sliding-text">मराठवाडा, विदर्भ आणि खानदेशातील ग्रामीण तरुणांना आपल्याच गावात राहून <span class="highlight-text">सन्मानाने काम करण्याची संधी.</span></div>
-            </div>
-
-            <div class="important-notice">
-                <strong>महत्वाची सूचना!</strong>
-                नोंदणी केलेल्या सर्व उमेदवारांना कळविण्यात येते की, ₹320 किमतीची कृषी उत्पादने संस्थेमार्फत मोफत परीक्षा केंद्रावरच वितरित करण्यात येतील.<br>
-                सर्वांनी परीक्षेस उपस्थित राहावे.
-            </div>
-
-            <div class="red-notice-box">
-                <h4>⚠️ महत्त्वाची सूचना / Important Notice</h4>
-                <p>कृषी मित्र नोंदणीसाठी अंतिम तारीख 15 एप्रिल 2026 होती तरी तांत्रिक अडचणीमुळे मुदत 22/04/2026 ते 30/04/2026 करण्यात येत आहे.</p>
-                <p style="margin-top: 10px; font-size: 0.9rem;">The last date for Krushi Mitra registration was April 15, 2026, but due to technical difficulties, the deadline has been extended from 22/04/2026 to 30/04/2026.</p>
-            </div>
-
+            <p style="font-size: 1.2rem; margin-bottom: 25px; color: var(--text-light);">ग्रामीण भागात कृषी साक्षरता वाढवण्यासाठी आणि शेतकऱ्यांना आधुनिक तंत्रज्ञानाशी जोडण्यासाठी आमच्या 'कृषी मित्र' अभियानात सामील व्हा. ही एक उत्तम संधी आहे समाजाच्या प्रगतीत योगदान देण्याची.</p>
             <div class="km-buttons">
                 <a href="https://forms.gle/ATMmN5UwXt5d1zd99" class="btn" target="_blank">Join now</a>
-                <a href="krushi_mitra_bharati.html" class="btn btn-outline" style="border-color: var(--primary-green); color: var(--primary-green);">More Details</a>
             </div>
         </div>
         <div class="km-image">
@@ -864,53 +787,105 @@
         </div>
     </section>
 
-    <section class="krushi-mitra reveal" style="background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%); margin-top: 0; padding-top: 40px; padding-bottom: 60px;">
-        <div class="km-text" style="max-width: 100%;">
-            <h2>जिल्हा समन्वयक नेमणे आहे</h2>
-            <p class="subtitle" style="color: var(--dark-green); font-weight: bold; font-size: 1.3rem;">महात्मा फुले कृषी विकास केंद्र, छत्रपती संभाजीनगर (खाजगी)</p>
+    <section id="about" class="about reveal">
+        <h2 class="section-title">महात्मा फुले कृषी विकास केंद्र बद्दल</h2>
+        <p>ही संस्था शेतकऱ्यांना आधुनिक शेती तंत्रज्ञान, तांत्रिक मार्गदर्शन आणि रोजगाराच्या संधी उपलब्ध करून देण्यासाठी अविरतपणे कार्य करते. आमचे प्रमुख ध्येय हे शेतकऱ्यांना प्रगत आणि शाश्वत शेतीकडे नेणे आणि संपूर्ण ग्रामीण भागाचा सर्वांगीण विकास साधणे हे आहे.</p>
+        <p>आम्ही पारंपारिक शेतीला वैज्ञानिक दृष्टिकोनाची जोड देऊन शेतकऱ्यांचे उत्पन्न वाढवण्यासाठी नवनवीन संशोधन आणि तंत्रज्ञानाचा प्रसार करतो. गावागावातील शेतकरी कुटुंबांना सक्षम बनवणे हाच आमचा खरा उद्देश आहे.</p>
+    </section>
 
-            <div style="background-color: var(--white); padding: 25px; border-radius: 10px; border-left: 5px solid var(--primary-green); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">
-                    <strong>खालील जिल्हे:</strong> छत्रपती संभाजीनगर, जालना, बीड, नांदेड, परभणी, हिंगोली, धाराशिव, लातूर, जळगाव, धुळे, नंदुरबार, नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली, अकोला, अमरावती, यवतमाळ, बुलडाणा, वाशीम
-                </p>
-                <ul style="list-style-type: none; margin-top: 15px; font-size: 1.1rem; color: var(--text-dark); line-height: 1.8;">
-                    <li style="margin-bottom: 8px;">🎓 <strong>शिक्षण:</strong> Bsc Agri (अनिवार्य), MBA (अनिवार्य)</li>
-                    <li style="margin-bottom: 8px;">💼 <strong>कामाचे स्वरूप:</strong> जिल्हा स्तरावर प्रकल्पाचे नियोजन करणे तालुका समन्वयक प्रशिक्षण, कृषी मित्र प्रशिक्षण, कृषी मित्र परीक्षा निवडीमध्ये सहकार्य करणे.</li>
-                    <li style="margin-bottom: 8px;">💰 <strong>वेतन:</strong> ४५,०००/- प्रति महिना (निश्चित)</li>
-                    <li style="margin-bottom: 8px;">📅 <strong>मुलाखत दिनांक:</strong> ३/५/२०२६</li>
-                    <li style="margin-bottom: 8px;">📍 <strong>स्थळ:</strong> लेमन ट्री हॉटेल छत्रपती संभाजीनगर, सिडको</li>
-                    <li style="margin-bottom: 8px;">⏰ <strong>वेळ:</strong> सकाळी १०:०० ते सायंकाळी ५:०० वाजेपर्यंत</li>
-                </ul>
+    <section class="impact-section reveal">
+        <div class="impact-grid">
+            <div class="stat-box">
+                <span class="icon">👨‍🌾</span>
+                <h3>५०,०००+</h3>
+                <p>जोडलेले शेतकरी</p>
             </div>
-            
-            <div class="km-buttons">
-                <a href="https://forms.gle/SCYhXLoNdDMUYQn97" class="btn" target="_blank">Apply Now</a>
+            <div class="stat-box">
+                <span class="icon">🏡</span>
+                <h3>१,२००+</h3>
+                <p>गावांमध्ये पोहोच</p>
+            </div>
+            <div class="stat-box">
+                <span class="icon">👨‍🔬</span>
+                <h3>१५०+</h3>
+                <p>अनुभवी कृषी तज्ञ</p>
+            </div>
+            <div class="stat-box">
+                <span class="icon">📈</span>
+                <h3>४०%</h3>
+                <p>उत्पादनात सरासरी वाढ</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about reveal">
-        <h2 class="section-title">महात्मा फुले कृषी विकास केंद्र बद्दल</h2>
-        <p>ही संस्था शेतकऱ्यांना आधुनिक शेती तंत्रज्ञान, तांत्रिक मार्गदर्शन आणि रोजगाराच्या संधी उपलब्ध करून देण्यासाठी कार्य करते. आमचे ध्येय म्हणजे शेतकऱ्यांना प्रगत शेतीकडे नेणे आणि ग्रामीण भागाचा विकास करणे.</p>
-    </section>
-
     <section id="services" class="services reveal">
-        <h2 class="section-title">आमच्या सेवा</h2>
+        <h2 class="section-title">आमचे प्रमुख उपक्रम आणि सेवा</h2>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">🌱</div>
                 <h3>पिकांचे नियोजन</h3>
-                <p>योग्य पिक निवड, हंगामानुसार नियोजन आणि उत्पादन वाढवण्यासाठी मार्गदर्शन.</p>
+                <p>तुमच्या जमिनीच्या प्रकारानुसार योग्य पिक निवड, हंगामानुसार लागवड नियोजन आणि जास्तीत जास्त उत्पादन वाढवण्यासाठी अचूक मार्गदर्शन.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🧪</div>
                 <h3>खत व फवारणी मार्गदर्शन</h3>
-                <p>योग्य खत व्यवस्थापन आणि सुरक्षित फवारणीसाठी माहिती.</p>
+                <p>पिकांवरील रोग व कीड नियंत्रण, योग्य खत व्यवस्थापन आणि कमी खर्चात सुरक्षित व प्रभावी फवारणीसाठी तज्ञांची माहिती.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🚜</div>
                 <h3>आधुनिक शेती तंत्रज्ञान</h3>
-                <p>नवीन शेती पद्धती, सिंचन तंत्रज्ञान आणि स्मार्ट शेती उपाय.</p>
+                <p>नवीन शेती पद्धती, ठिबक व तुषार सिंचन तंत्रज्ञान, आणि स्मार्ट शेती उपायांचा वापर करून पाण्याची व वेळेची बचत.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>माती आणि पाणी परीक्षण</h3>
+                <p>पिकांच्या सुपीकतेसाठी माती व पाण्याचे शास्त्रीय परीक्षण करून त्यातील घटक ओळखून योग्य खतांची शिफारस करणे.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌿</div>
+                <h3>सेंद्रिय शेती प्रोत्साहन</h3>
+                <p>रासायनिक खतांचा वापर कमी करून, गांडूळ खत, जीवामृत आणि नैसर्गिक शेती पद्धतींचा अवलंब करण्यासाठी विशेष प्रशिक्षण.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>शेतमाल बाजारपेठ मार्गदर्शन</h3>
+                <p>तयार झालेल्या शेतमालाला योग्य भाव मिळवून देण्यासाठी बाजारपेठेचा अभ्यास आणि थेट विक्री व्यवस्थेविषयी मार्गदर्शन.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials reveal">
+        <h2 class="section-title">शेतकऱ्यांचे मनोगत</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"महात्मा फुले कृषी विकास केंद्राच्या मार्गदर्शनामुळे आणि माती परीक्षणानुसार केलेल्या खत व्यवस्थापनामुळे माझ्या कपाशीच्या उत्पादनात यावर्षी दीडपट वाढ झाली आहे. त्यांचा तांत्रिक सल्ला खूप मोलाचा ठरला."</p>
+                <div class="testimonial-author">
+                    <div style="font-size: 2.5rem;">👤</div>
+                    <div class="author-info">
+                        <h4>रमेश पाटील</h4>
+                        <p>प्रगतशील शेतकरी, जळगाव</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"केंद्राच्या 'कृषी मित्र' योजनेद्वारे मला माझ्याच गावात शेती विषयक नवीन तंत्रज्ञान शिकायला मिळाले. सेंद्रिय शेतीचे महत्त्व समजल्यामुळे आता जमिनीचा पोत सुधारला आहे आणि खर्चही कमी झाला आहे."</p>
+                <div class="testimonial-author">
+                    <div style="font-size: 2.5rem;">👤</div>
+                    <div class="author-info">
+                        <h4>संतोष घुगे</h4>
+                        <p>शेतकरी, बीड</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"फवारणी आणि कीड नियंत्रणाबाबत यांचे तज्ञ अचूक माहिती देतात. पूर्वी चुकीच्या औषधांमुळे होणारे नुकसान आता पूर्णपणे थांबले आहे. संस्थेचे कार्य खरोखरच कौतुकास्पद आहे."</p>
+                <div class="testimonial-author">
+                    <div style="font-size: 2.5rem;">👤</div>
+                    <div class="author-info">
+                        <h4>विनायक देशमुख</h4>
+                        <p>शेतकरी, छत्रपती संभाजीनगर</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -969,17 +944,6 @@
     </footer>
 
     <script>
-        // --- Popup Notification Logic ---
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('notificationPopup').classList.add('show');
-            }, 800); // Shows popup 0.8 seconds after page load
-        });
-
-        function closePopup() {
-            document.getElementById('notificationPopup').classList.remove('show');
-        }
-
         // --- Header Scroll Effect ---
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
@@ -1019,26 +983,6 @@
             imageSlides[currentImageSlide].classList.add('active');
         }
         setInterval(nextImageSlide, 4000);
-
-        // --- Animated 4-Second Text Slider for Krushi Mitra Section ---
-        const slidingTexts = document.querySelectorAll('.sliding-text');
-        let currentTextIndex = 0;
-
-        function animateTextSlider() {
-            slidingTexts[currentTextIndex].classList.remove('active');
-            slidingTexts[currentTextIndex].classList.add('exit');
-            
-            const previousTextIndex = currentTextIndex;
-            currentTextIndex = (currentTextIndex + 1) % slidingTexts.length;
-            
-            setTimeout(() => {
-                slidingTexts[previousTextIndex].classList.remove('exit');
-            }, 600);
-
-            slidingTexts[currentTextIndex].classList.add('active');
-        }
-
-        setInterval(animateTextSlider, 4000);
 
         // --- Scroll Reveal Animation ---
         function reveal() {
