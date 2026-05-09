@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="mr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Under Maintenance | Mahatma Phule Krushi Vikas Kendra-महात्मा फुले कृषी विकास केंद्र</title>
-    <meta name="description" content="महात्मा फुले कृषी विकास केंद्र - वेबसाईट देखभाल सुरू आहे. We will be live shortly.">
+    <title>Mahatma Phule Krushi Vikas Kendra-महात्मा फुले कृषी विकास केंद्र</title>
+    <meta name="description" content="मेघा भरती: प्रत्येक गावात एक 'कृषी मित्र नेमणे आहे! मराठवाडा, विदर्भ आणि खानदेशातील ग्रामीण तरुणांना आपल्याच गावात राहून सन्मानाने काम करण्याची संधी.">
+    <meta name="keywords" content="Krushi Mitra, Agriculture, Farming, Mahatma Phule Krushi Vikas Kendra, Jobs in Agriculture, Maharashtra">
     
     <link rel="icon" href="https://i.ibb.co/Pv6GGGT3/logo.png" type="image/png">
     
@@ -36,17 +36,20 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--header-height);
+        }
+
         body {
             font-family: 'Mukta', sans-serif;
             color: var(--text-dark);
             background-color: #f8fdfa;
             line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        /* --- Header --- */
+        /* --- Header & Navigation --- */
         header {
             position: fixed;
             top: 0;
@@ -55,10 +58,11 @@
             background-color: var(--white);
             box-shadow: var(--shadow-sm);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             padding: 0 5%;
             z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         .logo-container {
@@ -73,6 +77,11 @@
             width: 55px;
             object-fit: contain;
             border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container:hover img {
+            transform: scale(1.05);
         }
 
         .logo-text h1 {
@@ -88,112 +97,609 @@
             line-height: 1.2;
         }
 
-        /* --- Maintenance Section --- */
-        .maintenance-section {
-            flex-grow: 1;
-            margin-top: var(--header-height);
+        .nav-links {
             display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            transition: transform 0.3s ease;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 60px 5%;
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-green);
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--dark-green);
+            border-color: var(--dark-green);
+            transform: translateY(-3px);
+            color: var(--white);
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--dark-green);
+        }
+
+        /* --- Hero Slider Section --- */
+        .hero-slider {
+            position: relative;
+            height: 100vh;
+            margin-top: var(--header-height);
+            background-color: var(--dark-green);
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1.05);
+            transition: opacity 1.5s ease-in-out, transform 4s ease-in-out;
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(10, 40, 20, 0.9) 0%, rgba(10, 40, 20, 0.4) 60%, transparent 100%);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            color: var(--white);
+            text-align: left;
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--light-yellow);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.1;
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .hero-content .eng-text {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            line-height: 1.5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            border-left: 4px solid var(--primary-green);
+            padding-left: 15px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* --- Krushi Mitra Section --- */
+        .krushi-mitra {
+            padding: 80px 5%;
             background: linear-gradient(135deg, var(--light-yellow) 0%, #fdf6e3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
             position: relative;
             overflow: hidden;
         }
 
-        .maintenance-section::before {
+        .krushi-mitra::before {
             content: '';
             position: absolute;
             top: -50px;
             right: -50px;
-            width: 250px;
-            height: 250px;
-            background-color: rgba(39, 174, 96, 0.05);
+            width: 200px;
+            height: 200px;
+            background-color: rgba(39, 174, 96, 0.1);
             border-radius: 50%;
             z-index: 0;
         }
 
-        .maintenance-card {
+        .km-text {
+            flex: 1;
+            max-width: 650px;
+            z-index: 1;
             background: var(--white);
-            padding: 50px;
+            padding: 40px;
             border-radius: 20px;
             box-shadow: var(--shadow-md);
-            border-top: 6px solid var(--primary-green);
-            max-width: 750px;
-            width: 100%;
-            text-align: center;
-            z-index: 1;
-            animation: fadeIn 1s ease-out forwards;
+            border-top: 5px solid var(--highlight-gold);
+            animation: pulse-highlight 3s infinite alternate;
         }
 
-        .gear-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            display: inline-block;
-            animation: spin 8s linear infinite;
+        @keyframes pulse-highlight {
+            0% { box-shadow: 0 5px 20px rgba(241, 196, 15, 0.2); }
+            100% { box-shadow: 0 10px 30px rgba(241, 196, 15, 0.5); }
         }
 
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .maintenance-card h2.marathi-title {
+        .km-text h2 {
             font-size: 2.5rem;
             color: var(--dark-green);
-            margin-bottom: 5px;
+            margin-bottom: 25px;
             line-height: 1.2;
         }
 
-        .maintenance-card h3.english-title {
-            font-size: 1.8rem;
-            color: var(--text-light);
-            margin-bottom: 30px;
-            font-weight: 600;
+        .km-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .divider {
+        .km-image {
+            flex: 1;
+            text-align: right;
+            z-index: 1;
+        }
+
+        .km-image img {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.4s ease;
+        }
+
+        .km-image img:hover {
+            transform: translateY(-10px);
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 90px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 60px;
+            font-weight: 700;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
             width: 80px;
             height: 4px;
-            background-color: var(--highlight-gold);
-            margin: 0 auto 30px;
+            background-color: var(--primary-green);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
             border-radius: 2px;
         }
 
-        .message-block {
-            margin-bottom: 30px;
+        /* --- New Job Post Section --- */
+        .job-post-section {
+            background-color: #fcfcfc;
+            padding: 60px 5%;
         }
 
-        .message-block p {
-            font-size: 1.2rem;
-            color: var(--text-dark);
+        .job-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            max-width: 900px;
+            margin: 0 auto;
+            border-left: 8px solid var(--primary-green);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed #ddd;
+        }
+
+        .job-header h3 {
+            font-size: 1.8rem;
+            color: var(--dark-green);
             margin-bottom: 10px;
         }
 
-        .contact-cta {
-            background-color: #f4faf6;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid rgba(39, 174, 96, 0.2);
-            margin-top: 30px;
+        .job-header h4 {
+            font-size: 1.6rem;
+            color: #d35400;
+            font-weight: 700;
         }
 
-        .contact-cta p {
-            font-size: 1.1rem;
-            margin: 5px 0;
-            color: var(--dark-green);
+        .job-details {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .job-details p {
+            font-size: 1.15rem;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.6;
+        }
+
+        .job-details strong {
+            color: var(--text-dark);
+            min-width: 140px;
+            display: inline-block;
+        }
+
+        .job-details a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .job-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Popup Modal Styles --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 15px;
+            max-width: 650px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            border-top: 6px solid #e74c3c;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            transition: color 0.3s;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: #e74c3c;
+        }
+
+        .modal-text {
+            margin-bottom: 20px;
+        }
+
+        .modal-text h3 {
+            color: #c0392b;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .modal-text p {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        .modal-divider {
+            height: 1px;
+            background: #ddd;
+            margin: 25px 0;
+        }
+
+        /* --- About Section --- */
+        .about {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            font-size: 1.25rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* --- Impact Statistics Section --- */
+        .impact-section {
+            background: linear-gradient(rgba(30, 132, 73, 0.9), rgba(39, 174, 96, 0.9)), url('https://i.ibb.co/LD2GHHsv/image001.jpg') center/cover fixed;
+            color: var(--white);
+            padding: 70px 5%;
+            text-align: center;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-box {
+            padding: 20px;
+        }
+
+        .stat-box .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .stat-box h3 {
+            font-size: 3.5rem;
+            color: var(--light-yellow);
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-box p {
+            font-size: 1.3rem;
             font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- Services Section --- */
+        .services {
+            background-color: #f4faf6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 45px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(to bottom, var(--primary-green), var(--dark-green));
+            transition: height 0.4s ease;
+            z-index: -1;
+            opacity: 0.05;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-green);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        /* --- Testimonials Section --- */
+        .testimonials {
+            background-color: var(--white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #fdfaf3;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            border-top: 5px solid var(--highlight-gold);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-card::before {
+            content: '”';
+            font-size: 6rem;
+            color: rgba(241, 196, 15, 0.2);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .author-info h4 {
+            color: var(--dark-green);
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.95rem;
         }
 
         /* --- Footer --- */
         footer {
             background-color: var(--dark-green);
             color: var(--white);
-            padding: 50px 5% 20px;
+            padding: 80px 5% 20px;
+            position: relative;
         }
 
         .footer-grid {
@@ -201,109 +707,29 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
             max-width: 1200px;
-            margin: 0 auto 30px;
-            text-align: center;
+            margin: 0 auto 50px;
         }
 
         .footer-col h4 {
             font-size: 1.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             color: var(--light-yellow);
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-green);
+            border-radius: 2px;
         }
 
         .footer-col p {
             font-size: 1.1rem;
             margin-bottom: 15px;
-            line-height: 1.6;
-            color: #ecf0f1;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .footer-col svg {
-            flex-shrink: 0;
-            margin-top: 4px;
-            fill: var(--light-yellow);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 1rem;
-            color: #bdc3c7;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            .maintenance-card { padding: 30px 20px; }
-            .maintenance-card h2.marathi-title { font-size: 2rem; }
-            .maintenance-card h3.english-title { font-size: 1.4rem; }
-            .message-block p { font-size: 1.05rem; }
-            .logo-text h1 { font-size: 1.1rem; }
-            .logo-text p { font-size: 0.75rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <header id="header">
-        <div class="logo-container">
-            <img src="https://i.ibb.co/Pv6GGGT3/logo.png" alt="महात्मा फुले कृषी विकास केंद्र लोगो" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%2327ae60\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-size=\'12\'>Logo</text></svg>'">
-            <div class="logo-text">
-                <h1>महात्मा फुले कृषी विकास केंद्र</h1>
-                <p>Mahatma Phule Krushi Vikas Kendra</p>
-            </div>
-        </div>
-    </header>
-
-    <main class="maintenance-section">
-        <div class="maintenance-card">
-            <div class="gear-icon">⚙️</div>
-            <h2 class="marathi-title">वेबसाईट देखभाल सुरू आहे</h2>
-            <h3 class="english-title">Under Maintenance</h3>
-            
-            <div class="divider"></div>
-            
-            <div class="message-block">
-                <p>सध्या आमच्या वेबसाईटवर काही तांत्रिक सुधारणांचे काम सुरू आहे. आम्ही लवकरच नवीन आणि प्रगत प्रणालीसह परत येऊ. गैरसोयीबद्दल क्षमस्व!</p>
-                <p style="color: var(--text-light); margin-top: 15px;">We are currently performing scheduled maintenance to improve your experience. Our website will be live again shortly. Thank you for your patience!</p>
-            </div>
-
-            <div class="contact-cta">
-                <p>तातडीच्या मदतीसाठी संपर्क साधा / For urgent inquiries:</p>
-                <p>📞 +91 91581 53198 | +91 91581 53189</p>
-                <p>✉️ mpkvk1903@gmail.com</p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>संस्थेचे नाव</h4>
-                <p style="font-size: 1.4rem; font-weight: bold; color: var(--white); margin-bottom: 5px;">महात्मा फुले कृषी विकास केंद्र</p>
-                <p style="font-size: 1rem; color: var(--light-yellow);">Mahatma Phule Krushi Vikas Kendra</p>
-            </div>
-            
-            <div class="footer-col">
-                <h4>पत्ता / Address</h4>
-                <p>
-                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    <span>
-                        प्लॉट नं. १२, गट नं. २९, तायल सिद्धिविनायक स्क्वेअर, छत्रपती संभाजीनगर, औरंगाबाद - ४३१००१
-                    </span>
-                </p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 महात्मा फुले कृषी विकास केंद्र. सर्व हक्क सुरक्षित.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
-
-```
+            li
