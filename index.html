@@ -306,8 +306,52 @@
         .km-text h2 {
             font-size: 2.5rem;
             color: var(--dark-green);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             line-height: 1.2;
+        }
+        
+        .km-text > p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Professional Notice in Krushi Mitra Section */
+        .km-notice {
+            background: linear-gradient(135deg, #f4fdf6 0%, #e8f8ec 100%);
+            border: 1px solid #d1eed8;
+            border-left: 5px solid var(--primary-green);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.08);
+        }
+
+        .km-notice-icon {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .km-notice-text {
+            text-align: left;
+        }
+
+        .km-notice-text strong {
+            color: var(--dark-green);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.1rem;
+        }
+
+        .km-notice-text p {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.4;
         }
 
         .km-buttons {
@@ -360,18 +404,18 @@
             border-radius: 2px;
         }
 
-        /* --- New Job Post Section (Minimalist & Professional) --- */
+        /* --- New Job Post Section (Smaller & Compact) --- */
         .job-post-section {
             background-color: #f9fbf9;
-            padding: 80px 5%;
+            padding: 60px 5%;
         }
 
         .job-card-minimal {
             background: var(--white);
             border-radius: 12px;
             padding: 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            max-width: 850px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            max-width: 750px; /* Reduced width for a tighter look */
             margin: 0 auto;
             border-top: 5px solid var(--primary-green);
             overflow: hidden;
@@ -380,13 +424,13 @@
         }
 
         .job-card-minimal:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
         }
 
         .job-header-minimal {
             background: linear-gradient(135deg, #f2faf5 0%, #eaf5ed 100%);
-            padding: 35px 40px;
+            padding: 25px 30px; /* Reduced padding */
             text-align: center;
             border-bottom: 1px solid #d8ebd0;
             position: relative;
@@ -396,11 +440,11 @@
             display: inline-block;
             background-color: #e74c3c;
             color: var(--white);
-            padding: 5px 15px;
+            padding: 4px 12px; /* Smaller badge */
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             letter-spacing: 0.5px;
             box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
             animation: pulse-red 2s infinite;
@@ -408,13 +452,13 @@
 
         @keyframes pulse-red {
             0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+            70% { box-shadow: 0 0 0 8px rgba(231, 76, 60, 0); }
             100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
         }
 
         .job-header-minimal h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.25rem; /* Reduced font size */
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
@@ -424,7 +468,7 @@
             transition: color 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .header-link:hover {
@@ -433,41 +477,42 @@
 
         .header-link::after {
             content: '🔗';
-            font-size: 1.1rem;
+            font-size: 1rem;
             opacity: 0.7;
         }
 
         .job-header-minimal h4 {
-            font-size: 2.2rem;
+            font-size: 1.7rem; /* Reduced font size */
             color: var(--dark-green);
             font-weight: 700;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+            margin: 0;
         }
 
         .job-body {
-            padding: 40px;
+            padding: 30px; /* Reduced padding */
         }
 
         .job-details-grid {
             display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 20px 15px;
+            grid-template-columns: 120px 1fr; /* Tighter grid */
+            gap: 15px 10px; /* Tighter gap */
             align-items: start;
         }
 
         .job-label {
             font-weight: 700;
             color: var(--dark-green);
-            font-size: 1.15rem;
+            font-size: 1rem; /* Smaller font */
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .job-value {
-            font-size: 1.15rem;
+            font-size: 1rem; /* Smaller font */
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .job-value a {
@@ -480,47 +525,16 @@
             text-decoration: underline;
         }
 
-        .special-notice {
-            background: linear-gradient(to right, #fcf3cf 0%, #fdf9e7 100%);
-            border-left: 5px solid var(--highlight-gold);
-            padding: 25px;
-            margin-top: 40px;
-            border-radius: 0 10px 10px 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            box-shadow: 0 4px 15px rgba(241, 196, 15, 0.15);
-        }
-
-        .special-notice .notice-icon {
-            font-size: 2.5rem;
-            line-height: 1;
-        }
-
-        .special-notice p {
-            margin: 0;
-            color: #8a6d3b;
-            font-size: 1.15rem;
-            line-height: 1.5;
-        }
-
-        .special-notice strong {
-            color: #a07d1c;
-            display: block;
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-        }
-
         .job-action {
             text-align: center;
-            margin-top: 45px;
+            margin-top: 35px; /* Reduced margin */
         }
 
         .job-action .btn {
-            padding: 15px 50px;
-            font-size: 1.3rem;
+            padding: 12px 40px; /* Smaller button */
+            font-size: 1.1rem; /* Smaller font */
             border-radius: 50px;
-            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
         }
 
         /* --- Popup Modal Styles --- */
@@ -971,27 +985,29 @@
             .impact-grid { grid-template-columns: 1fr; gap: 20px; }
             .stat-box h3 { font-size: 2.8rem; }
             
-            /* Responsive updates for the minimalist job card */
+            /* Responsive updates for the minimalist job card & notices */
             .job-details-grid {
                 grid-template-columns: 1fr;
                 gap: 5px;
             }
             .job-label {
-                margin-top: 15px;
+                margin-top: 10px;
             }
             .job-body {
-                padding: 25px 20px;
+                padding: 20px 15px;
             }
             .job-header-minimal {
-                padding: 25px 20px;
+                padding: 20px 15px;
             }
             .job-header-minimal h4 {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
-            .special-notice {
+            
+            .km-notice {
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
+                align-items: flex-start;
+                padding: 15px;
+                gap: 10px;
             }
         }
     </style>
@@ -1065,7 +1081,17 @@
     <section class="krushi-mitra reveal" id="krushi-mitra">
         <div class="km-text">
             <h2>कृषी मित्र बना - आमच्या ज्ञानमोहीमेत सहभागी व्हा</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 25px; color: var(--text-light);">ग्रामीण भागात कृषी साक्षरता वाढवण्यासाठी आणि शेतकऱ्यांना आधुनिक तंत्रज्ञानाशी जोडण्यासाठी आमच्या 'कृषी मित्र' अभियानात सामील व्हा. ही एक उत्तम संधी आहे समाजाच्या प्रगतीत योगदान देण्याची.</p>
+            <p>ग्रामीण भागात कृषी साक्षरता वाढवण्यासाठी आणि शेतकऱ्यांना आधुनिक तंत्रज्ञानाशी जोडण्यासाठी आमच्या 'कृषी मित्र' अभियानात सामील व्हा. ही एक उत्तम संधी आहे समाजाच्या प्रगतीत योगदान देण्याची.</p>
+            
+            <!-- Professional Notice Added Here -->
+            <div class="km-notice">
+                <span class="km-notice-icon">🎁</span>
+                <div class="km-notice-text">
+                    <strong>नोंदणी केलेल्या सर्व उमेदवारांना कळविण्यात येते की:</strong>
+                    <p>₹320 किमतीची कृषी उत्पादने संस्थेमार्फत <b>मोफत परीक्षा केंद्रावरच</b> वितरित करण्यात येतील.</p>
+                </div>
+            </div>
+
             <div class="km-buttons">
                 <a href="https://forms.gle/ATMmN5UwXt5d1zd99" class="btn" target="_blank">Join now</a>
             </div>
@@ -1075,7 +1101,7 @@
         </div>
     </section>
 
-    <!-- NEW MINIMALIST JOB POST SECTION -->
+    <!-- NEW MINIMALIST JOB POST SECTION (Compact Layout) -->
     <section class="job-post-section reveal" id="new-jobs">
         <h2 class="section-title">नवीन भरती</h2>
         <div class="job-card-minimal">
@@ -1111,14 +1137,6 @@
                     
                     <div class="job-label">🌐 वेबसाईट:</div>
                     <div class="job-value"><a href="http://www.mpkvk.com" target="_blank">www.mpkvk.com</a></div>
-                </div>
-
-                <div class="special-notice">
-                    <span class="notice-icon">🎁</span>
-                    <div>
-                        <strong>नोंदणी केलेल्या सर्व उमेदवारांना कळविण्यात येते की:</strong>
-                        <p>₹320 किमतीची कृषी उत्पादने संस्थेमार्फत मोफत परीक्षा केंद्रावरच वितरित करण्यात येतील.</p>
-                    </div>
                 </div>
 
                 <div class="job-action">
