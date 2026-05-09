@@ -360,70 +360,167 @@
             border-radius: 2px;
         }
 
-        /* --- New Job Post Section --- */
+        /* --- New Job Post Section (Minimalist & Professional) --- */
         .job-post-section {
-            background-color: #fcfcfc;
-            padding: 60px 5%;
+            background-color: #f9fbf9;
+            padding: 80px 5%;
         }
 
-        .job-card {
+        .job-card-minimal {
             background: var(--white);
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: var(--shadow-md);
-            max-width: 900px;
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            max-width: 850px;
             margin: 0 auto;
-            border-left: 8px solid var(--primary-green);
-            position: relative;
+            border-top: 5px solid var(--primary-green);
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
 
-        .job-header {
+        .job-card-minimal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .job-header-minimal {
+            background: linear-gradient(135deg, #f2faf5 0%, #eaf5ed 100%);
+            padding: 35px 40px;
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px dashed #ddd;
+            border-bottom: 1px solid #d8ebd0;
+            position: relative;
         }
 
-        .job-header h3 {
-            font-size: 1.8rem;
-            color: var(--dark-green);
-            margin-bottom: 10px;
-        }
-
-        .job-header h4 {
-            font-size: 1.6rem;
-            color: #d35400;
+        .badge-new {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
             font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+            animation: pulse-red 2s infinite;
         }
 
-        .job-details {
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        .job-header-minimal h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-link:hover {
+            color: var(--primary-green);
+        }
+
+        .header-link::after {
+            content: '🔗';
+            font-size: 1.1rem;
+            opacity: 0.7;
+        }
+
+        .job-header-minimal h4 {
+            font-size: 2.2rem;
+            color: var(--dark-green);
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .job-body {
+            padding: 40px;
+        }
+
+        .job-details-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
+            grid-template-columns: 140px 1fr;
+            gap: 20px 15px;
+            align-items: start;
         }
 
-        .job-details p {
+        .job-label {
+            font-weight: 700;
+            color: var(--dark-green);
             font-size: 1.15rem;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .job-value {
+            font-size: 1.15rem;
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
-        .job-details strong {
-            color: var(--text-dark);
-            min-width: 140px;
-            display: inline-block;
-        }
-
-        .job-details a {
+        .job-value a {
             color: var(--primary-green);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
         }
 
-        .job-details a:hover {
+        .job-value a:hover {
             text-decoration: underline;
+        }
+
+        .special-notice {
+            background: linear-gradient(to right, #fcf3cf 0%, #fdf9e7 100%);
+            border-left: 5px solid var(--highlight-gold);
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(241, 196, 15, 0.15);
+        }
+
+        .special-notice .notice-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .special-notice p {
+            margin: 0;
+            color: #8a6d3b;
+            font-size: 1.15rem;
+            line-height: 1.5;
+        }
+
+        .special-notice strong {
+            color: #a07d1c;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .job-action {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .job-action .btn {
+            padding: 15px 50px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
         }
 
         /* --- Popup Modal Styles --- */
@@ -874,11 +971,27 @@
             .impact-grid { grid-template-columns: 1fr; gap: 20px; }
             .stat-box h3 { font-size: 2.8rem; }
             
-            .job-details p {
-                flex-direction: column;
+            /* Responsive updates for the minimalist job card */
+            .job-details-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
             }
-            .job-details strong {
-                margin-bottom: 5px;
+            .job-label {
+                margin-top: 15px;
+            }
+            .job-body {
+                padding: 25px 20px;
+            }
+            .job-header-minimal {
+                padding: 25px 20px;
+            }
+            .job-header-minimal h4 {
+                font-size: 1.6rem;
+            }
+            .special-notice {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
         }
     </style>
@@ -962,22 +1075,55 @@
         </div>
     </section>
 
-    <!-- New Job Post Section added here -->
+    <!-- NEW MINIMALIST JOB POST SECTION -->
     <section class="job-post-section reveal" id="new-jobs">
         <h2 class="section-title">नवीन भरती</h2>
-        <div class="job-card">
-            <div class="job-header">
-                <h3>महात्मा फुले कृषी विकास केंद्र, छत्रपती संभाजीनगर (खाजगी)</h3>
-                <h4>Taluka समन्वयक नेमणे आहे</h4>
+        <div class="job-card-minimal">
+            <div class="job-header-minimal">
+                <span class="badge-new">नवीन</span>
+                <h3>
+                    <a href="https://forms.gle/CZSaxUDGoTZJJJsEA" target="_blank" class="header-link">
+                        महात्मा फुले कृषी विकास केंद्र, छत्रपती संभाजीनगर (खाजगी)
+                    </a>
+                </h3>
+                <h4>तालुका समन्वयक नेमणे आहे</h4>
             </div>
-            <div class="job-details">
-                <p><strong>📍 खालील जिल्हे:</strong> छत्रपती संभाजीनगर, जालना, बीड, नांदेड, परभणी, हिंगोली, धाराशिव, लातूर, जळगाव, धुळे, नंदुरबार, नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली, अकोला, अमरावती, यवतमाळ, बुलडाणा, वाशीम</p>
-                <p><strong>🎓 शिक्षण:</strong> Bsc Agri (अनिवार्य)</p>
-                <p><strong>💼 कामाचे स्वरूप:</strong> Taluka स्तरावर प्रकल्पाचे नियोजन करणे, तालुका समन्वयक प्रशिक्षण, कृषी मित्र प्रशिक्षण, कृषी मित्र परीक्षा निवडीमध्ये सहकार्य करणे.</p>
-                <p><strong>💰 वेतन:</strong> 20000 - 30000 प्रति महिना</p>
-                <p><strong>⏰ वेळ:</strong> 10.00 ते 5.00 वाजेपर्यंत</p>
-                <p><strong>🌐 Website:</strong> <a href="http://WWW.MPKVK.COM" target="_blank">WWW.MPKVK.COM</a></p>
-                <p><strong>📞 मोबाईल नंबर:</strong> 9158153198, 9158153179, 9158153191, 9579120653</p>
+            
+            <div class="job-body">
+                <div class="job-details-grid">
+                    <div class="job-label">📍 जिल्हे:</div>
+                    <div class="job-value">छत्रपती संभाजीनगर, जालना, बीड, नांदेड, परभणी, हिंगोली, धाराशिव, लातूर, जळगाव, धुळे, नंदुरबार, नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली, अकोला, अमरावती, यवतमाळ, बुलडाणा, वाशीम</div>
+                    
+                    <div class="job-label">🎓 शिक्षण:</div>
+                    <div class="job-value">Bsc Agri (अनिवार्य)</div>
+                    
+                    <div class="job-label">💼 कामाचे स्वरूप:</div>
+                    <div class="job-value">तालुका स्तरावर प्रकल्पाचे नियोजन करणे, तालुका समन्वयक प्रशिक्षण, कृषी मित्र प्रशिक्षण, कृषी मित्र परीक्षा निवडीमध्ये सहकार्य करणे.</div>
+                    
+                    <div class="job-label">💰 वेतन:</div>
+                    <div class="job-value">₹20,000 - ₹30,000 प्रति महिना</div>
+                    
+                    <div class="job-label">⏰ वेळ:</div>
+                    <div class="job-value">सकाळी 10.00 ते सायंकाळी 5.00 वाजेपर्यंत</div>
+                    
+                    <div class="job-label">📞 संपर्क:</div>
+                    <div class="job-value">9158153198, 9158153179, 9158153191, 9579120653</div>
+                    
+                    <div class="job-label">🌐 वेबसाईट:</div>
+                    <div class="job-value"><a href="http://www.mpkvk.com" target="_blank">www.mpkvk.com</a></div>
+                </div>
+
+                <div class="special-notice">
+                    <span class="notice-icon">🎁</span>
+                    <div>
+                        <strong>नोंदणी केलेल्या सर्व उमेदवारांना कळविण्यात येते की:</strong>
+                        <p>₹320 किमतीची कृषी उत्पादने संस्थेमार्फत मोफत परीक्षा केंद्रावरच वितरित करण्यात येतील.</p>
+                    </div>
+                </div>
+
+                <div class="job-action">
+                    <a href="https://forms.gle/CZSaxUDGoTZJJJsEA" class="btn" target="_blank">आता अर्ज करा (Apply Now)</a>
+                </div>
             </div>
         </div>
     </section>
