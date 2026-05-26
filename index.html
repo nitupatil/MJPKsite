@@ -262,6 +262,83 @@
             flex-wrap: wrap;
         }
 
+        /* --- NEW: Live Update Banner Styles --- */
+        .live-update-container {
+            padding: 30px 5% 0;
+            background: #f8fdfa;
+        }
+        
+        .live-update-banner {
+            display: block;
+            background: linear-gradient(135deg, #fff3f3 0%, #fdeaea 100%);
+            border: 2px solid #fadbd8;
+            border-left: 6px solid #e74c3c;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.15);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .live-update-banner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(231, 76, 60, 0.25);
+            background: linear-gradient(135deg, #fdeaea 0%, #fadbd8 100%);
+        }
+
+        .blinking-dot {
+            height: 14px;
+            width: 14px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+            animation: blinker 1.2s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+            box-shadow: 0 0 10px #e74c3c;
+        }
+
+        @keyframes blinker {
+            0% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px #e74c3c; }
+            100% { opacity: 0.3; transform: scale(1.2); box-shadow: 0 0 20px #e74c3c; }
+        }
+
+        .live-update-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #c0392b;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.5px;
+        }
+
+        .live-update-desc {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .click-for-more {
+            display: inline-block;
+            font-size: 1.05rem;
+            color: #2980b9;
+            font-weight: 700;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .live-update-banner:hover .click-for-more {
+            color: #c0392b;
+        }
+
         /* --- Krushi Mitra Section --- */
         .krushi-mitra {
             padding: 80px 5%;
@@ -979,6 +1056,9 @@
             .hero-buttons { flex-direction: row; width: 100%; gap: 2vw; justify-content: flex-start; }
             .hero-buttons .btn { width: auto; padding: 1.5vw 3vw; font-size: 2.2vw; border-width: 1px; border-radius: 15px; }
             
+            .live-update-title { font-size: 1.4rem; }
+            .live-update-desc { font-size: 1rem; }
+
             .km-text h2 { font-size: 2rem; }
             .section-title { font-size: 2rem; }
             
@@ -1014,7 +1094,6 @@
 </head>
 <body>
 
-    <!-- Popup Modal -->
     <div class="modal-overlay" id="noticeModal">
         <div class="modal-content">
             <button class="modal-close" id="closeModal">&times;</button>
@@ -1078,12 +1157,24 @@
         </div>
     </section>
 
+    <div class="live-update-container reveal">
+        <a href="krushi_mitra_bharati.html" class="live-update-banner">
+            <div class="live-update-title">
+                <span class="blinking-dot"></span> Live Update / नवीन अपडेट
+            </div>
+            <div class="live-update-desc">
+                कृषी मित्र पदासाठी सूचना / परीक्षा नोटीस जाहीर करण्यात आली आहे.
+            </div>
+            <div class="click-for-more">
+                अधिक माहितीसाठी येथे क्लिक करा (Click for more) ➔
+            </div>
+        </a>
+    </div>
     <section class="krushi-mitra reveal" id="krushi-mitra">
         <div class="km-text">
             <h2>कृषी मित्र बना - आमच्या ज्ञानमोहीमेत सहभागी व्हा</h2>
             <p>ग्रामीण भागात कृषी साक्षरता वाढवण्यासाठी आणि शेतकऱ्यांना आधुनिक तंत्रज्ञानाशी जोडण्यासाठी आमच्या 'कृषी मित्र' अभियानात सामील व्हा. ही एक उत्तम संधी आहे समाजाच्या प्रगतीत योगदान देण्याची.</p>
             
-            <!-- Professional Notice Added Here -->
             <div class="km-notice">
                 <span class="km-notice-icon">🎁</span>
                 <div class="km-notice-text">
@@ -1101,7 +1192,6 @@
         </div>
     </section>
 
-    <!-- NEW MINIMALIST JOB POST SECTION (Compact Layout) -->
     <section class="job-post-section reveal" id="new-jobs">
         <h2 class="section-title">नवीन भरती</h2>
         <div class="job-card-minimal">
@@ -1227,7 +1317,7 @@
                 </div>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"केंद्राच्या 'कृषी मित्र' योजनेद्वारे मला माझ्याच गावात शेती विषयक नवीन तंत्रज्ञान शिकायला मिळाले. सेंद्रिय शेतीचे महत्त्व समजल्यामुळे आता जमिनीचा पोत सुधारला आहे आणि खर्चही कमी झाला आहे."</p>
+                <p class="testimonial-text">"केंद्राच्या 'कृषी मित्र' योजनेद्वारे मला माझ्याच गावात शेती विषयक नवीन तंत्रज्ञान शिकायला मिळाले. सेंद्रिय शेतीचे महत्त्व समजल्यामुळे आता जमिनीचा पोत सुधारला মাঠে आहे आणि खर्चही कमी झाला आहे."</p>
                 <div class="testimonial-author">
                     <div style="font-size: 2.5rem;">👤</div>
                     <div class="author-info">
