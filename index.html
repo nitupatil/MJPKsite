@@ -704,6 +704,41 @@
             margin: 25px 0;
         }
 
+        /* --- Image Pop-up Modal Styles --- */
+        .image-modal-content {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            padding: 0;
+            max-width: 800px;
+        }
+
+        .image-modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            display: block;
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            font-size: 2.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--white);
+            transition: color 0.3s;
+            line-height: 1;
+            z-index: 2001;
+        }
+
+        .image-modal-close:hover {
+            color: #e74c3c;
+        }
+
         /* --- About Section --- */
         .about {
             background-color: var(--white);
@@ -1132,6 +1167,13 @@
         </div>
     </div>
 
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content image-modal-content">
+            <button class="image-modal-close" id="closeImageModal">&times;</button>
+            <img src="https://i.ibb.co/MkVR3fBG/photo-2026-06-10-10-33-26.jpg" alt="नवीन भरती जाहिरात (Full View)">
+        </div>
+    </div>
+
     <header id="header">
         <a href="index.html" class="logo-container">
             <img src="https://i.ibb.co/Pv6GGGT3/logo.png" alt="महात्मा फुले कृषी विकास केंद्र लोगो" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%2327ae60\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-size=\'12\'>Logo</text></svg>'">
@@ -1193,9 +1235,7 @@
                 <span class="km-notice-icon">🎁</span>
                 <div class="km-notice-text">
                     <strong>नोंदणी केलेल्या सर्व उमेदवारांना कळविण्यात येते की:</strong>
-                    <p>₹320 किमतीची कृषी उत्पादने संस्थेमार्फत <b>मोफत परीक्षा केंद्रावरच</b> वितरित करण्यात
-
-येतील.</p>
+                    <p>₹320 किमतीची कृषी उत्पादने संस्थेमार्फत <b>मोफत परीक्षा केंद्रावरच</b> वितरित करण्यात येतील.</p>
                 </div>
             </div>
 
@@ -1210,6 +1250,11 @@
 
     <section class="job-post-section reveal" id="new-jobs">
         <h2 class="section-title">नवीन भरती</h2>
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <img src="https://i.ibb.co/MkVR3fBG/photo-2026-06-10-10-33-26.jpg" id="jobPosterTrigger" alt="photo 2026 06 10 10 33 26" border="0" style="width: 100%; max-width: 750px; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+            <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 10px;"><i>(मोठे करून पाहण्यासाठी प्रतिमेवर क्लिक करा)</i></p>
+        </div>
         <div class="job-card-minimal">
             <div class="job-header-minimal">
                 <span class="badge-new">नवीन</span>
@@ -1224,7 +1269,7 @@
             <div class="job-body">
                 <div class="job-details-grid">
                     <div class="job-label">📍 जिल्हे:</div>
-                    <div class="job-value">छत्रपती संभाजीनगर, जालना, बीड, नांदेड, परभणी, hिंगोली, धाराशिव, लातूर, जळगाव, धुळे, नंदुरबार, नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली, अकोला, अमरावती, यवतमाळ, बुलडाणा, वाशीम</div>
+                    <div class="job-value">छत्रपती संभाजीनगर, जालना, बीड, नांदेड, परभणी, हिंगोली, धाराशिव, लातूर, जळगाव, धुळे, नंदुरबार, नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली, अकोला, अमरावती, यवतमाळ, बुलडाणा, वाशीम</div>
                     
                     <div class="job-label">🎓 शिक्षण:</div>
                     <div class="job-value">Bsc Agri (अनिवार्य)</div>
@@ -1448,15 +1493,40 @@
                 modal.classList.add('show');
             }, 500);
 
-            closeModal.addEventListener('click', () => {
-                modal.classList.remove('show');
-            });
+            if (closeModal) {
+                closeModal.addEventListener('click', () => {
+                    modal.classList.remove('show');
+                });
+            }
 
             window.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     modal.classList.remove('show');
                 }
             });
+        });
+
+        // --- Image Pop-up (Lightbox) Logic ---
+        const imageModal = document.getElementById('imageModal');
+        const closeImageModal = document.getElementById('closeImageModal');
+        const jobPosterTrigger = document.getElementById('jobPosterTrigger');
+
+        if (jobPosterTrigger) {
+            jobPosterTrigger.addEventListener('click', () => {
+                imageModal.classList.add('show');
+            });
+        }
+
+        if (closeImageModal) {
+            closeImageModal.addEventListener('click', () => {
+                imageModal.classList.remove('show');
+            });
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('show');
+            }
         });
 
         // --- Image Background Slider Logic ---
