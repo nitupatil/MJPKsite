@@ -182,6 +182,18 @@
             color: var(--dark-green);
         }
 
+        .btn-info-blue {
+            background-color: #2980b9;
+            border-color: #2980b9;
+            box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3);
+        }
+
+        .btn-info-blue:hover {
+            background-color: #1f618d;
+            border-color: #1f618d;
+            box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4);
+        }
+
         /* --- Hero Slider Section --- */
         .hero-slider {
             position: relative;
@@ -262,7 +274,7 @@
             flex-wrap: wrap;
         }
 
-        /* --- NEW: Live Update Banner Styles --- */
+        /* --- Live Update Banner Styles --- */
         .live-update-container {
             padding: 30px 5% 0;
             background: #f8fdfa;
@@ -481,7 +493,7 @@
             border-radius: 2px;
         }
 
-        /* --- New Job Post Section (Smaller & Compact) --- */
+        /* --- New Job Post Section --- */
         .job-post-section {
             background-color: #f9fbf9;
             padding: 60px 5%;
@@ -492,7 +504,7 @@
             border-radius: 12px;
             padding: 0;
             box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            max-width: 750px; /* Reduced width for a tighter look */
+            max-width: 750px;
             margin: 0 auto;
             border-top: 5px solid var(--primary-green);
             overflow: hidden;
@@ -507,7 +519,7 @@
 
         .job-header-minimal {
             background: linear-gradient(135deg, #f2faf5 0%, #eaf5ed 100%);
-            padding: 25px 30px; /* Reduced padding */
+            padding: 25px 30px;
             text-align: center;
             border-bottom: 1px solid #d8ebd0;
             position: relative;
@@ -517,7 +529,7 @@
             display: inline-block;
             background-color: #e74c3c;
             color: var(--white);
-            padding: 4px 12px; /* Smaller badge */
+            padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 700;
@@ -534,7 +546,7 @@
         }
 
         .job-header-minimal h3 {
-            font-size: 1.25rem; /* Reduced font size */
+            font-size: 1.25rem;
             margin-bottom: 8px;
             font-weight: 600;
         }
@@ -559,7 +571,7 @@
         }
 
         .job-header-minimal h4 {
-            font-size: 1.7rem; /* Reduced font size */
+            font-size: 1.7rem;
             color: var(--dark-green);
             font-weight: 700;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
@@ -567,27 +579,27 @@
         }
 
         .job-body {
-            padding: 30px; /* Reduced padding */
+            padding: 30px;
         }
 
         .job-details-grid {
             display: grid;
-            grid-template-columns: 120px 1fr; /* Tighter grid */
-            gap: 15px 10px; /* Tighter gap */
+            grid-template-columns: 120px 1fr;
+            gap: 15px 10px;
             align-items: start;
         }
 
         .job-label {
             font-weight: 700;
             color: var(--dark-green);
-            font-size: 1rem; /* Smaller font */
+            font-size: 1rem;
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
         .job-value {
-            font-size: 1rem; /* Smaller font */
+            font-size: 1rem;
             color: var(--text-dark);
             line-height: 1.5;
         }
@@ -603,15 +615,17 @@
         }
 
         .job-action {
-            text-align: center;
-            margin-top: 35px; /* Reduced margin */
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 35px;
         }
 
         .job-action .btn {
-            padding: 12px 40px; /* Smaller button */
-            font-size: 1.1rem; /* Smaller font */
+            padding: 12px 35px;
+            font-size: 1.05rem;
             border-radius: 50px;
-            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
         }
 
         /* --- Popup Modal Styles --- */
@@ -1065,7 +1079,6 @@
             .impact-grid { grid-template-columns: 1fr; gap: 20px; }
             .stat-box h3 { font-size: 2.8rem; }
             
-            /* Responsive updates for the minimalist job card & notices */
             .job-details-grid {
                 grid-template-columns: 1fr;
                 gap: 5px;
@@ -1170,6 +1183,7 @@
             </div>
         </a>
     </div>
+
     <section class="krushi-mitra reveal" id="krushi-mitra">
         <div class="km-text">
             <h2>कृषी मित्र बना - आमच्या ज्ञानमोहीमेत सहभागी व्हा</h2>
@@ -1179,7 +1193,9 @@
                 <span class="km-notice-icon">🎁</span>
                 <div class="km-notice-text">
                     <strong>नोंदणी केलेल्या सर्व उमेदवारांना कळविण्यात येते की:</strong>
-                    <p>₹320 किमतीची कृषी उत्पादने संस्थेमार्फत <b>मोफत परीक्षा केंद्रावरच</b> वितरित करण्यात येतील.</p>
+                    <p>₹320 किमतीची कृषी उत्पादने संस्थेमार्फत <b>मोफत परीक्षा केंद्रावरच</b> वितरित करण्यात
+
+येतील.</p>
                 </div>
             </div>
 
@@ -1208,7 +1224,7 @@
             <div class="job-body">
                 <div class="job-details-grid">
                     <div class="job-label">📍 जिल्हे:</div>
-                    <div class="job-value">छत्रपती संभाजीनगर, जालना, बीड, नांदेड, परभणी, हिंगोली, धाराशिव, लातूर, जळगाव, धुळे, नंदुरबार, नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली, अकोला, अमरावती, यवतमाळ, बुलडाणा, वाशीम</div>
+                    <div class="job-value">छत्रपती संभाजीनगर, जालना, बीड, नांदेड, परभणी, hिंगोली, धाराशिव, लातूर, जळगाव, धुळे, नंदुरबार, नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली, अकोला, अमरावती, यवतमाळ, बुलडाणा, वाशीम</div>
                     
                     <div class="job-label">🎓 शिक्षण:</div>
                     <div class="job-value">Bsc Agri (अनिवार्य)</div>
@@ -1231,6 +1247,7 @@
 
                 <div class="job-action">
                     <a href="https://forms.gle/CZSaxUDGoTZJJJsEA" class="btn" target="_blank">आता अर्ज करा (Apply Now)</a>
+                    <a href="krushi_mitra_bharati.html#vacancies-section" class="btn btn-info-blue">More Information (अधिक माहिती)</a>
                 </div>
             </div>
         </div>
@@ -1317,7 +1334,7 @@
                 </div>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"केंद्राच्या 'कृषी मित्र' योजनेद्वारे मला माझ्याच गावात शेती विषयक नवीन तंत्रज्ञान शिकायला मिळाले. सेंद्रिय शेतीचे महत्त्व समजल्यामुळे आता जमिनीचा पोत सुधारला মাঠে आहे आणि खर्चही कमी झाला आहे."</p>
+                <p class="testimonial-text">"केंद्राच्या 'कृषी मित्र' योजनेद्वारे मला माझ्याच गावात शेती विषयक नवीन तंत्रज्ञान शिकायला मिळाले. सेंद्रिय शेतीचे महत्त्व समजल्यामुळे आता जमिनीचा पोत सुधारला गेला आहे आणि खर्चही कमी झाला आहे."</p>
                 <div class="testimonial-author">
                     <div style="font-size: 2.5rem;">👤</div>
                     <div class="author-info">
@@ -1427,7 +1444,6 @@
             const modal = document.getElementById('noticeModal');
             const closeModal = document.getElementById('closeModal');
 
-            // Slight delay before showing the modal
             setTimeout(() => {
                 modal.classList.add('show');
             }, 500);
@@ -1436,7 +1452,6 @@
                 modal.classList.remove('show');
             });
 
-            // Close when clicking outside of the modal box
             window.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     modal.classList.remove('show');
