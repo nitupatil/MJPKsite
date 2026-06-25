@@ -182,6 +182,18 @@
             color: var(--dark-green);
         }
 
+        .btn-info-blue {
+            background-color: #2980b9;
+            border-color: #2980b9;
+            box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3);
+        }
+
+        .btn-info-blue:hover {
+            background-color: #1f618d;
+            border-color: #1f618d;
+            box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4);
+        }
+
         /* --- Hero Slider Section --- */
         .hero-slider {
             position: relative;
@@ -339,175 +351,6 @@
             color: #c0392b;
         }
 
-        /* --- PDF Download Styles (Trigger) --- */
-        .pdf-download-container {
-            padding: 15px 5% 0;
-            background: #f8fdfa;
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .pdf-banner {
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #eaf5ed 0%, #d8ebd0 100%);
-            border: 2px solid #c3e0bb;
-            border-left: 6px solid var(--primary-green);
-            padding: 15px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            width: 100%;
-            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-align: left;
-        }
-
-        .pdf-banner:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.2);
-            background: linear-gradient(135deg, #d8ebd0 0%, #c3e0bb 100%);
-        }
-
-        .pdf-icon {
-            font-size: 2.2rem;
-            margin-right: 15px;
-            line-height: 1;
-        }
-
-        .pdf-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pdf-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--dark-green);
-            margin-bottom: 2px;
-        }
-
-        .pdf-desc {
-            font-size: 1rem;
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-
-        /* --- PDF Viewer Modal Styles --- */
-        .pdf-viewer-content {
-            width: 95%;
-            max-width: 1000px;
-            height: 90vh;
-            padding: 0 !important;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background: var(--white);
-        }
-
-        .pdf-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 25px;
-            background: #f4faf6;
-            border-bottom: 2px solid #eaf5ed;
-        }
-
-        .pdf-viewer-title {
-            color: var(--dark-green);
-            font-size: 1.3rem;
-            margin: 0;
-            font-weight: 700;
-        }
-
-        .pdf-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .btn-download-pdf {
-            padding: 8px 18px;
-            font-size: 1rem;
-            border-radius: 30px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .modal-close-icon {
-            font-size: 2.2rem;
-            background: none;
-            border: none;
-            color: var(--text-light);
-            cursor: pointer;
-            line-height: 1;
-            transition: color 0.3s ease;
-        }
-
-        .modal-close-icon:hover {
-            color: #e74c3c;
-        }
-
-        .pdf-iframe {
-            width: 100%;
-            flex-grow: 1;
-            border: none;
-            background: #e9e9e9;
-        }
-
-        /* --- Always Visible Floating Notice Button --- */
-        .floating-notice-btn {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background-color: #e74c3c;
-            color: var(--white);
-            border: none;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            font-family: 'Mukta', sans-serif;
-            cursor: pointer;
-            z-index: 1500;
-            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .floating-notice-btn:hover {
-            background-color: #c0392b;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
-        }
-
-        .wave-icon {
-            display: inline-block;
-            font-size: 1.4rem;
-            animation: wave-hand 2.5s infinite;
-            transform-origin: 70% 70%;
-        }
-
-        @keyframes wave-hand {
-            0% { transform: rotate(0deg); }
-            10% { transform: rotate(14deg); }
-            20% { transform: rotate(-8deg); }
-            30% { transform: rotate(14deg); }
-            40% { transform: rotate(-4deg); }
-            50% { transform: rotate(10deg); }
-            60% { transform: rotate(0deg); }
-            100% { transform: rotate(0deg); }
-        }
-
         /* --- Krushi Mitra Section --- */
         .krushi-mitra {
             padding: 80px 5%;
@@ -562,6 +405,7 @@
             margin-bottom: 20px;
         }
 
+        /* Professional Notice in Krushi Mitra Section */
         .km-notice {
             background: linear-gradient(135deg, #f4fdf6 0%, #e8f8ec 100%);
             border: 1px solid #d1eed8;
@@ -649,6 +493,141 @@
             border-radius: 2px;
         }
 
+        /* --- New Job Post Section --- */
+        .job-post-section {
+            background-color: #f9fbf9;
+            padding: 60px 5%;
+        }
+
+        .job-card-minimal {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            max-width: 750px;
+            margin: 0 auto;
+            border-top: 5px solid var(--primary-green);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .job-card-minimal:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+
+        .job-header-minimal {
+            background: linear-gradient(135deg, #f2faf5 0%, #eaf5ed 100%);
+            padding: 25px 30px;
+            text-align: center;
+            border-bottom: 1px solid #d8ebd0;
+            position: relative;
+        }
+
+        .badge-new {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        .job-header-minimal h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .header-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-link:hover {
+            color: var(--primary-green);
+        }
+
+        .header-link::after {
+            content: '🔗';
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        .job-header-minimal h4 {
+            font-size: 1.7rem;
+            color: var(--dark-green);
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+            margin: 0;
+        }
+
+        .job-body {
+            padding: 30px;
+        }
+
+        .job-details-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 15px 10px;
+            align-items: start;
+        }
+
+        .job-label {
+            font-weight: 700;
+            color: var(--dark-green);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .job-value {
+            font-size: 1rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        .job-value a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .job-value a:hover {
+            text-decoration: underline;
+        }
+
+        .job-action {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .job-action .btn {
+            padding: 12px 35px;
+            font-size: 1.05rem;
+            border-radius: 50px;
+        }
+
         /* --- Popup Modal Styles --- */
         .modal-overlay {
             position: fixed;
@@ -723,6 +702,146 @@
             height: 1px;
             background: #ddd;
             margin: 25px 0;
+        }
+
+        /* --- Image Pop-up Modal Styles --- */
+        .image-modal-content {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            padding: 0;
+            max-width: 800px;
+        }
+
+        .image-modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            display: block;
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            font-size: 2.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--white);
+            transition: color 0.3s;
+            line-height: 1;
+            z-index: 2001;
+        }
+
+        .image-modal-close:hover {
+            color: #e74c3c;
+        }
+
+        /* --- PDF Notice Modal Styles --- */
+        .pdf-modal-content {
+            padding: 0;
+            max-width: 980px;
+            width: 94%;
+            height: 90vh;
+            overflow: hidden;
+            border-top: 6px solid #e74c3c;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pdf-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #fff3f3 0%, #fdeaea 100%);
+            border-bottom: 1px solid #fadbd8;
+        }
+
+        .pdf-modal-title {
+            text-align: left;
+        }
+
+        .pdf-modal-title h3 {
+            font-size: 1.25rem;
+            color: #c0392b;
+            line-height: 1.3;
+            margin: 0 0 4px;
+        }
+
+        .pdf-modal-title p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        .pdf-close {
+            position: static;
+            flex-shrink: 0;
+            font-size: 2rem;
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid #fadbd8;
+            color: #c0392b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            line-height: 1;
+        }
+
+        .pdf-close:hover {
+            background: #e74c3c;
+            color: #ffffff;
+            transform: rotate(90deg);
+        }
+
+        .pdf-action-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 12px 16px;
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .pdf-action-bar .btn {
+            padding: 9px 22px;
+            font-size: 1rem;
+            border-radius: 24px;
+        }
+
+        .pdf-viewer-wrap {
+            flex: 1;
+            background: #f2f2f2;
+            min-height: 350px;
+        }
+
+        .pdf-viewer-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+            background: #ffffff;
+        }
+
+        .pdf-mobile-note {
+            display: none;
+            padding: 10px 15px;
+            background: #fff8e1;
+            color: #6d4c00;
+            font-size: 0.95rem;
+            text-align: center;
+            line-height: 1.4;
         }
 
         /* --- About Section --- */
@@ -1100,33 +1219,60 @@
             .impact-grid { grid-template-columns: 1fr; gap: 20px; }
             .stat-box h3 { font-size: 2.8rem; }
             
+            .job-details-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+            .job-label {
+                margin-top: 10px;
+            }
+            .job-body {
+                padding: 20px 15px;
+            }
+            .job-header-minimal {
+                padding: 20px 15px;
+            }
+            .job-header-minimal h4 {
+                font-size: 1.4rem;
+            }
+            
             .km-notice {
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 15px;
                 gap: 10px;
             }
-            
-            .pdf-header {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
+
+            .pdf-modal-content {
+                width: 96%;
+                height: 86vh;
             }
 
-            .floating-notice-btn {
-                bottom: 20px;
-                left: 20px;
+            .pdf-modal-header {
+                padding: 12px 14px;
+            }
+
+            .pdf-modal-title h3 {
+                font-size: 1.05rem;
+            }
+
+            .pdf-modal-title p {
+                font-size: 0.85rem;
+            }
+
+            .pdf-action-bar .btn {
+                width: 100%;
                 padding: 10px 18px;
-                font-size: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .pdf-mobile-note {
+                display: block;
             }
         }
     </style>
 </head>
 <body>
-
-    <button class="floating-notice-btn" id="floatingNoticeBtn" aria-label="Open Public Notice">
-        <span class="wave-icon">👋</span> जाहीर निवेदन (Notice)
-    </button>
 
     <div class="modal-overlay" id="noticeModal">
         <div class="modal-content">
@@ -1153,19 +1299,36 @@
         </div>
     </div>
 
-    <div class="modal-overlay" id="pdfViewerModal">
-        <div class="modal-content pdf-viewer-content">
-            <div class="pdf-header">
-                <h3 class="pdf-viewer-title">Center List / केंद्र यादी PDF</h3>
-                <div class="pdf-actions">
-                    <a href="assets/Center%20List.pdf" download class="btn btn-download-pdf">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                        Download PDF
-                    </a>
-                    <button class="modal-close-icon" id="closePdfViewer" aria-label="Close Viewer">&times;</button>
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content image-modal-content">
+            <button class="image-modal-close" id="closeImageModal">&times;</button>
+            <img src="https://i.ibb.co/MkVR3fBG/photo-2026-06-10-10-33-26.jpg" alt="नवीन भरती जाहिरात (Full View)">
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="pdfNoticeModal">
+        <div class="modal-content pdf-modal-content">
+            <div class="pdf-modal-header">
+                <div class="pdf-modal-title">
+                    <h3>📄 कृषी मित्र सूचना / परीक्षा केंद्र यादी</h3>
+                    <p>PDF खाली पाहू शकता. डाउनलोड किंवा नवीन टॅबमध्ये ओपन करण्यासाठी बटण वापरा.</p>
                 </div>
+                <button class="pdf-close" id="closePdfNoticeModal" aria-label="Close PDF">&times;</button>
             </div>
-            <iframe src="assets/Center%20List.pdf" class="pdf-iframe" title="Center List PDF"></iframe>
+
+            <div class="pdf-action-bar">
+                <a href="assets/Center%20List.pdf" class="btn" target="_blank" rel="noopener">Open PDF</a>
+                <a href="assets/Center%20List.pdf" class="btn btn-info-blue" download="Center List.pdf">Download PDF</a>
+            </div>
+
+            <div class="pdf-mobile-note">
+                PDF दिसत नसल्यास <strong>Open PDF</strong> बटण वापरा.
+            </div>
+
+            <div class="pdf-viewer-wrap">
+                <iframe src="assets/Center%20List.pdf#toolbar=1&navpanes=0" title="Center List PDF"></iframe>
+            </div>
         </div>
     </div>
 
@@ -1208,7 +1371,7 @@
     </section>
 
     <div class="live-update-container reveal">
-        <a href="krushi_mitra_bharati.html" class="live-update-banner">
+        <a href="assets/Center%20List.pdf" class="live-update-banner" id="pdfNoticeTrigger">
             <div class="live-update-title">
                 <span class="blinking-dot"></span> Live Update / नवीन अपडेट
             </div>
@@ -1219,16 +1382,6 @@
                 अधिक माहितीसाठी येथे क्लिक करा (Click for more) ➔
             </div>
         </a>
-    </div>
-
-    <div class="pdf-download-container reveal" id="pdfBannerContainer">
-        <div class="pdf-banner" id="openPdfViewerBtn">
-            <div class="pdf-icon">📄</div>
-            <div class="pdf-text">
-                <span class="pdf-title">Center List / केंद्र यादी PDF</span>
-                <span class="pdf-desc">Click here to View and Download (येथे क्लिक करा)</span>
-            </div>
-        </div>
     </div>
 
     <section class="krushi-mitra reveal" id="krushi-mitra">
@@ -1334,7 +1487,7 @@
                 </div>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"केंद्राच्या 'कृषी मित्र' योजनेद्वारे मला माझ्याच गावात शेती विषयक नवीन तंत्रज्ञान शिकायला मिळाले. सेंद्रिय शेतीचे महत्त्व समजल्यामुळे आता जमिनीचा पोत सुधारला गेला आहे आणि खर्चही कमी झाला आहे."</p>
+                <p class="testimonial-text">"केंद्राच्या 'कृषी मित्र' योजनेद्वारे मला माझ्याच गावात शेती विषयक नवीन तंत्रज्ञान शिकायला मिळाले. सेंद्रिय शेतीचे महत्त्व समजल्यामुळे आता जमिनीचा पोत सुधारला गेलाავლा आहे आणि खर्चही कमी झाला आहे."</p>
                 <div class="testimonial-author">
                     <div style="font-size: 2.5rem;">👤</div>
                     <div class="author-info">
@@ -1439,19 +1592,107 @@
             });
         });
 
-        // --- Public Notice Modal Logic ---
-        const noticeModal = document.getElementById('noticeModal');
-        const closeModal = document.getElementById('closeModal');
-        const floatingNoticeBtn = document.getElementById('floatingNoticeBtn');
-
-        // Auto-show on load
+        // --- Popup Modal Logic ---
         window.addEventListener('load', function() {
+            const modal = document.getElementById('noticeModal');
+            const closeModal = document.getElementById('closeModal');
+
             setTimeout(() => {
-                noticeModal.classList.add('show');
+                modal.classList.add('show');
             }, 500);
+
+            if (closeModal) {
+                closeModal.addEventListener('click', () => {
+                    modal.classList.remove('show');
+                });
+            }
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                }
+            });
         });
 
-        // Close button logic
-        if (closeModal) {
-            closeModal.addEventListener('click', () => {
-                notice
+
+        // --- PDF Notice Modal Logic ---
+        const pdfNoticeModal = document.getElementById('pdfNoticeModal');
+        const closePdfNoticeModal = document.getElementById('closePdfNoticeModal');
+        const pdfNoticeTrigger = document.getElementById('pdfNoticeTrigger');
+
+        if (pdfNoticeTrigger) {
+            pdfNoticeTrigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                pdfNoticeModal.classList.add('show');
+            });
+        }
+
+        if (closePdfNoticeModal) {
+            closePdfNoticeModal.addEventListener('click', () => {
+                pdfNoticeModal.classList.remove('show');
+            });
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === pdfNoticeModal) {
+                pdfNoticeModal.classList.remove('show');
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && pdfNoticeModal && pdfNoticeModal.classList.contains('show')) {
+                pdfNoticeModal.classList.remove('show');
+            }
+        });
+
+        // --- Image Pop-up (Lightbox) Logic ---
+        const imageModal = document.getElementById('imageModal');
+        const closeImageModal = document.getElementById('closeImageModal');
+        const jobPosterTrigger = document.getElementById('jobPosterTrigger');
+
+        if (jobPosterTrigger) {
+            jobPosterTrigger.addEventListener('click', () => {
+                imageModal.classList.add('show');
+            });
+        }
+
+        if (closeImageModal) {
+            closeImageModal.addEventListener('click', () => {
+                imageModal.classList.remove('show');
+            });
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('show');
+            }
+        });
+
+        // --- Image Background Slider Logic ---
+        const imageSlides = document.querySelectorAll('.hero-slider .slide');
+        let currentImageSlide = 0;
+
+        function nextImageSlide() {
+            imageSlides[currentImageSlide].classList.remove('active');
+            currentImageSlide = (currentImageSlide + 1) % imageSlides.length;
+            imageSlides[currentImageSlide].classList.add('active');
+        }
+        setInterval(nextImageSlide, 4000);
+
+        // --- Scroll Reveal Animation ---
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
