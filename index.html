@@ -351,6 +351,78 @@
             color: #c0392b;
         }
 
+        /* --- PDF Download Styles --- */
+        .pdf-download-container {
+            padding: 15px 5% 0;
+            background: #f8fdfa;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pdf-banner {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #eaf5ed 0%, #d8ebd0 100%);
+            border: 2px solid #c3e0bb;
+            border-left: 6px solid var(--primary-green);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            flex-grow: 1;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .pdf-banner:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.2);
+            background: linear-gradient(135deg, #d8ebd0 0%, #c3e0bb 100%);
+        }
+
+        .pdf-icon {
+            font-size: 2.2rem;
+            margin-right: 15px;
+            line-height: 1;
+        }
+
+        .pdf-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pdf-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 2px;
+        }
+
+        .pdf-desc {
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .close-pdf-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--text-light);
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+            line-height: 1;
+            padding: 0 10px;
+        }
+
+        .close-pdf-btn:hover {
+            color: #e74c3c;
+        }
+
         /* --- Krushi Mitra Section --- */
         .krushi-mitra {
             padding: 80px 5%;
@@ -1212,6 +1284,7 @@
         </div>
     </section>
 
+    <!-- LIVE UPDATE BANNER -->
     <div class="live-update-container reveal">
         <a href="krushi_mitra_bharati.html" class="live-update-banner">
             <div class="live-update-title">
@@ -1224,6 +1297,18 @@
                 अधिक माहितीसाठी येथे क्लिक करा (Click for more) ➔
             </div>
         </a>
+    </div>
+
+    <!-- NEW PDF DOWNLOAD LINK BANNER -->
+    <div class="pdf-download-container reveal" id="pdfBannerContainer">
+        <a href="assets/Center%20List.pdf" target="_blank" download class="pdf-banner">
+            <div class="pdf-icon">📄</div>
+            <div class="pdf-text">
+                <span class="pdf-title">Center List / केंद्र यादी PDF</span>
+                <span class="pdf-desc">Click here to Open and Download (येथे क्लिक करा)</span>
+            </div>
+        </a>
+        <button class="close-pdf-btn" onclick="document.getElementById('pdfBannerContainer').style.display='none'" aria-label="Close PDF Banner">&times;</button>
     </div>
 
     <section class="krushi-mitra reveal" id="krushi-mitra">
@@ -1339,7 +1424,7 @@
                 </div>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"फवारणी आणि कीड नियंत्रणाबाबत यांचे तज्ञ अचूक माहिती देतात. पूर्वी चुकीच्या औषधांमुळे होणारे नुकसान आता पूर्णपणे थांबले आहे. संस्थेचे कार्य खरोखरच कौतुकास्पद आहे."</p>
+                <p class="testimonial-text">"फवारणी आणि कीड नियंत्रणाबाबत यांचे तज्ञ अचूक माहिती देतात. पूर्वी चुकीच्या औषधांमुळे होणारे नुकसान आता पूर्णपणे थांबले গান্ধ्या पूर्णपणे थांबले आहे. संस्थेचे कार्य खरोखरच कौतुकास्पद आहे."</p>
                 <div class="testimonial-author">
                     <div style="font-size: 2.5rem;">👤</div>
                     <div class="author-info">
