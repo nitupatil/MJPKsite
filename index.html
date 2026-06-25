@@ -351,6 +351,59 @@
             color: #c0392b;
         }
 
+
+        .center-list-wave {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 10px auto 8px;
+            padding: 9px 20px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #c0392b 0%, #e74c3c 35%, #ff6b6b 50%, #e74c3c 65%, #c0392b 100%);
+            background-size: 220% 100%;
+            color: #ffffff;
+            font-size: 1.18rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            box-shadow: 0 8px 18px rgba(231, 76, 60, 0.28);
+            position: relative;
+            overflow: hidden;
+            animation: redWaveMove 2.2s linear infinite, redWavePulse 1.4s ease-in-out infinite;
+        }
+
+        .center-list-wave::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -70%;
+            width: 55%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%);
+            transform: skewX(-20deg);
+            animation: redWaveShine 1.8s ease-in-out infinite;
+        }
+
+        .center-list-wave span {
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes redWaveMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 220% 50%; }
+        }
+
+        @keyframes redWavePulse {
+            0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 8px 18px rgba(231, 76, 60, 0.28); }
+            50% { transform: translateY(-2px) scale(1.03); box-shadow: 0 12px 26px rgba(231, 76, 60, 0.42); }
+        }
+
+        @keyframes redWaveShine {
+            0% { left: -70%; }
+            100% { left: 125%; }
+        }
+
         /* --- Krushi Mitra Section --- */
         .krushi-mitra {
             padding: 80px 5%;
@@ -1213,6 +1266,12 @@
             .live-update-title { font-size: 1.4rem; }
             .live-update-desc { font-size: 1rem; }
 
+            .center-list-wave {
+                font-size: 1rem;
+                padding: 8px 15px;
+                margin: 8px auto 6px;
+            }
+
             .km-text h2 { font-size: 2rem; }
             .section-title { font-size: 2rem; }
             
@@ -1312,6 +1371,7 @@
             <div class="pdf-modal-header">
                 <div class="pdf-modal-title">
                     <h3>📄 कृषी मित्र सूचना / परीक्षा केंद्र यादी</h3>
+                    <div class="center-list-wave" style="margin: 6px 0 8px; font-size: 0.95rem; padding: 7px 15px;"><span>Centre List / परीक्षा केंद्र यादी</span></div>
                     <p>PDF खाली पाहू शकता. डाउनलोड किंवा नवीन टॅबमध्ये ओपन करण्यासाठी बटण वापरा.</p>
                 </div>
                 <button class="pdf-close" id="closePdfNoticeModal" aria-label="Close PDF">&times;</button>
@@ -1378,6 +1438,7 @@
             <div class="live-update-desc">
                 कृषी मित्र पदासाठी सूचना / परीक्षा नोटीस जाहीर करण्यात आली आहे.
             </div>
+            <div class="center-list-wave"><span>Centre List / परीक्षा केंद्र यादी</span></div>
             <div class="click-for-more">
                 अधिक माहितीसाठी येथे क्लिक करा (Click for more) ➔
             </div>
