@@ -289,7 +289,6 @@
             text-align: center;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(231, 76, 60, 0.15);
-            cursor: pointer;
             text-decoration: none;
             transition: all 0.3s ease;
             max-width: 900px;
@@ -1431,18 +1430,24 @@
     </section>
 
     <div class="live-update-container reveal">
-        <a href="assets/Center List.pdf" class="live-update-banner" id="pdfNoticeTrigger">
+        <div class="live-update-banner" style="cursor: default;">
             <div class="live-update-title">
                 <span class="blinking-dot"></span> Live Update / नवीन अपडेट
             </div>
             <div class="live-update-desc">
                 कृषी मित्र पदासाठी सूचना / परीक्षा नोटीस जाहीर करण्यात आली आहे.
             </div>
-            <div class="center-list-wave"><span>Centre List / परीक्षा केंद्र यादी</span></div>
-            <div class="click-for-more">
-                अधिक माहितीसाठी येथे क्लिक करा (Click for more) ➔
+            
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 15px;">
+                <a href="krushi_mitra_bharati.html" style="text-decoration: none;">
+                    <div class="center-list-wave" style="margin: 0;"><span>सूचना / परीक्षा नोटीस / Exam Notice</span></div>
+                </a>
+                
+                <a href="assets/Center List.pdf" id="pdfNoticeTrigger" style="text-decoration: none;">
+                    <div class="center-list-wave" style="margin: 0;"><span>Centre List / परीक्षा केंद्र यादी</span></div>
+                </a>
             </div>
-        </a>
+        </div>
     </div>
 
     <section class="krushi-mitra reveal" id="krushi-mitra">
